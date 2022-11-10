@@ -5,8 +5,6 @@ X
 (src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
 e
 5src/main/java/com/rootar/rootarweb/metier/Region.java,8\a\8a16774451f1f12ef944aee30911597c9ed2ef60
-g
-7src/main/java/com/rootar/rootarweb/dao/EmporterDAO.java,0\5\058e53ffdedd973b9c974e71777193ac8566c74d
 e
 5src/main/java/com/rootar/rootarweb/dao/ExigerDAO.java,8\2\82335336f03108b9b1ef2ce52d853910f718e513
 f
@@ -29,11 +27,7 @@ g
 7src/main/java/com/rootar/rootarweb/dao/AeroportDAO.java,2\8\289227a7c73138e67713ba1da739d1c8cad0f8c3
 i
 9src/main/java/com/rootar/rootarweb/dao/CategoriesDAO.java,6\6\66e71fe9c5ac95a2220bd2b3578bfdebdc48a367
-l
-<src/main/java/com/rootar/rootarweb/dao/DonneesClimatDAO.java,f\b\fbda15d6ff0e83f37462d90c25aa5c3eb1705f55
 i
 9src/main/java/com/rootar/rootarweb/dao/EvenementsDAO.java,c\3\c375beccb640f0548a8237b6cbc1906ad24b81a0
-f
-6src/main/java/com/rootar/rootarweb/dao/LanguesDAO.java,c\f\cf624436f79cf464e7372c5e2b2ab1797f44c85c
 i
 9src/main/java/com/rootar/rootarweb/dao/RootarConnect.java,a\b\ab0c32730e1632a980dd7ac14571a36da12ff88b
