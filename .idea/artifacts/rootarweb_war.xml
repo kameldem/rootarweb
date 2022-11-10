@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rootarweb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>rootarweb</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="rootarweb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="rootarweb:war exploded" />
+    </root>
+  </artifact>
+</component>

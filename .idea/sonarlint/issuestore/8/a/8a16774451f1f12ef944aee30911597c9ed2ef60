@@ -1,0 +1,12 @@
+
+‹
+java:S1319A"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÐŠàÛüÿÿÿÿ
+ƒ
+java:S1319E"mThe type of "arrayListpays" should be an interface such as "List" rather than the implementation "ArrayList".(œ´­Ä
+†
+java:S4165F"kRemove this useless assignment; "arrayListpays" already holds the assigned value along all execution paths.(‹™Å¹ÿÿÿÿÿ
+Q	java:S125*"<This block of commented-out lines of code should be removed.(Ú°à¬
+\
+java:S1854F"ARemove this useless assignment to local variable "arrayListpays".(‹™Å¹ÿÿÿÿÿ
+J
+java:S1656F"/Remove or correct this useless self-assignment.(‹™Å¹ÿÿÿÿÿ

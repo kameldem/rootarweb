@@ -1,0 +1,6 @@
+
+f	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ϊα…η
+l
+java:S1450"QRemove the "rs" field and declare it as a local variable in the relevant methods.(‰Ϊθόÿÿÿÿ
+x
+java:S4087Z"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ύΖ“Ύ

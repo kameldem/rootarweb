@@ -1,0 +1,9 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åç¾
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁûêË
+m	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê÷• 8—ï½Å0
+r	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üÚæåüÿÿÿÿ8—ï½Å0
+
+java:S4087{"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ıÆ“¾8´ï½Å0
+€
+java:S4087"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ıÆ“¾8¶ï½Å0
