@@ -9,7 +9,7 @@ import jakarta.faces.convert.Converter;
 import jakarta.faces.convert.FacesConverter;
 import jakarta.inject.Inject;
 
-@FacesConverter(value="languesconverter", managed = true)
+@FacesConverter(value="languesConverter", managed = true)
 public class LanguesConverter implements Converter {
 
     @Inject

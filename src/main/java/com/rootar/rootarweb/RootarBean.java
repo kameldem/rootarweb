@@ -18,43 +18,42 @@ public class RootarBean implements Serializable {
     private String nomIMage;
     private Continent continentSelected;
     private ArrayList<Continent> listContinent;
+    private Pays paysSelected;
     private ArrayList<Pays> listPays;
-
     private Aeroports aeroportsSelected;
-
     private ArrayList<Aeroports>ListAeroports;
-
-    private Categories categories;
-
+    private Categories categoriesSelected;
     private ArrayList<Categories> listCategories;
-
-    private DonneesClimat donneesClimat;
-
+    private DonneesClimat donneesClimatSelected;
     private ArrayList<DonneesClimat> donneesClimatArrayList;
-
-    private Ville ville;
-
+    private Ville villeSelected;
     private ArrayList<Ville> listVille;
-
-    private Region region;
-
+    private Region regionSelected;
     private ArrayList<Region> listRegion;
-
-    private Themes themes;
-
+    private Themes themesSelected;
     private ArrayList<Themes> listThemes;
-
-    private Visas visas;
-
+    private Visas visasSelected;
     private ArrayList<Visas> listVisas;
-
-    private Evenements evenements;
-
+    private Evenements evenementsSelected;
     private ArrayList<Evenements> listEvenments;
-
-    private Langues langues;
-
+    private Langues languesSelected;
     private ArrayList<Langues> listLangues;
+    private Monnaie monnaieSelected;
+    private ArrayList<Monnaie> listMonnaie;
+    private Objet objetSelected;
+    private ArrayList<Objet> listObjet;
+    private Priorite prioriteSelected;
+    private ArrayList<Priorite> listPriorite;
+    private RepresentationEtrangere repEtrSelected;
+    private ArrayList<RepresentationEtrangere> listRepEtr;
+    private Sante santeSelected;
+    private ArrayList<Sante> listSante;
+    private TypeClimat typeClimatSelected;
+    private ArrayList<TypeClimat> listTypeClimat;
+    private TypeVisas typeVisasSelected;
+    private ArrayList<TypeVisas> listTypeVisas;
+
+
 
 
     public RootarBean() {
@@ -91,20 +90,28 @@ public class RootarBean implements Serializable {
         this.continentSelected = continentSelected;
     }
 
-    public ArrayList<Pays> getListPays() {
-        return listPays;
-    }
-
-    public void setListPays(ArrayList<Pays> listPays) {
-        this.listPays = listPays;
-    }
-
     public ArrayList<Continent> getListContinent() {
         return listContinent;
     }
 
     public void setListContinent(ArrayList<Continent> listContinent) {
         this.listContinent = listContinent;
+    }
+
+    public Pays getPaysSelected() {
+        return paysSelected;
+    }
+
+    public void setPaysSelected(Pays paysSelected) {
+        this.paysSelected = paysSelected;
+    }
+
+    public ArrayList<Pays> getListPays() {
+        return listPays;
+    }
+
+    public void setListPays(ArrayList<Pays> listPays) {
+        this.listPays = listPays;
     }
 
     public Aeroports getAeroportsSelected() {
@@ -123,12 +130,12 @@ public class RootarBean implements Serializable {
         ListAeroports = listAeroports;
     }
 
-    public Categories getCategories() {
-        return categories;
+    public Categories getCategoriesSelected() {
+        return categoriesSelected;
     }
 
-    public void setCategories(Categories categories) {
-        this.categories = categories;
+    public void setCategoriesSelected(Categories categoriesSelected) {
+        this.categoriesSelected = categoriesSelected;
     }
 
     public ArrayList<Categories> getListCategories() {
@@ -139,12 +146,12 @@ public class RootarBean implements Serializable {
         this.listCategories = listCategories;
     }
 
-    public DonneesClimat getDonneesClimat() {
-        return donneesClimat;
+    public DonneesClimat getDonneesClimatSelected() {
+        return donneesClimatSelected;
     }
 
-    public void setDonneesClimat(DonneesClimat donneesClimat) {
-        this.donneesClimat = donneesClimat;
+    public void setDonneesClimatSelected(DonneesClimat donneesClimatSelected) {
+        this.donneesClimatSelected = donneesClimatSelected;
     }
 
     public ArrayList<DonneesClimat> getDonneesClimatArrayList() {
@@ -155,12 +162,12 @@ public class RootarBean implements Serializable {
         this.donneesClimatArrayList = donneesClimatArrayList;
     }
 
-    public Ville getVille() {
-        return ville;
+    public Ville getVilleSelected() {
+        return villeSelected;
     }
 
-    public void setVille(Ville ville) {
-        this.ville = ville;
+    public void setVilleSelected(Ville villeSelected) {
+        this.villeSelected = villeSelected;
     }
 
     public ArrayList<Ville> getListVille() {
@@ -171,12 +178,12 @@ public class RootarBean implements Serializable {
         this.listVille = listVille;
     }
 
-    public Region getRegion() {
-        return region;
+    public Region getRegionSelected() {
+        return regionSelected;
     }
 
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setRegionSelected(Region regionSelected) {
+        this.regionSelected = regionSelected;
     }
 
     public ArrayList<Region> getListRegion() {
@@ -187,12 +194,12 @@ public class RootarBean implements Serializable {
         this.listRegion = listRegion;
     }
 
-    public Themes getThemes() {
-        return themes;
+    public Themes getThemesSelected() {
+        return themesSelected;
     }
 
-    public void setThemes(Themes themes) {
-        this.themes = themes;
+    public void setThemesSelected(Themes themesSelected) {
+        this.themesSelected = themesSelected;
     }
 
     public ArrayList<Themes> getListThemes() {
@@ -203,12 +210,12 @@ public class RootarBean implements Serializable {
         this.listThemes = listThemes;
     }
 
-    public Visas getVisas() {
-        return visas;
+    public Visas getVisasSelected() {
+        return visasSelected;
     }
 
-    public void setVisas(Visas visas) {
-        this.visas = visas;
+    public void setVisasSelected(Visas visasSelected) {
+        this.visasSelected = visasSelected;
     }
 
     public ArrayList<Visas> getListVisas() {
@@ -219,12 +226,12 @@ public class RootarBean implements Serializable {
         this.listVisas = listVisas;
     }
 
-    public Evenements getEvenements() {
-        return evenements;
+    public Evenements getEvenementsSelected() {
+        return evenementsSelected;
     }
 
-    public void setEvenements(Evenements evenements) {
-        this.evenements = evenements;
+    public void setEvenementsSelected(Evenements evenementsSelected) {
+        this.evenementsSelected = evenementsSelected;
     }
 
     public ArrayList<Evenements> getListEvenments() {
@@ -235,12 +242,12 @@ public class RootarBean implements Serializable {
         this.listEvenments = listEvenments;
     }
 
-    public Langues getLangues() {
-        return langues;
+    public Langues getLanguesSelected() {
+        return languesSelected;
     }
 
-    public void setLangues(Langues langues) {
-        this.langues = langues;
+    public void setLanguesSelected(Langues languesSelected) {
+        this.languesSelected = languesSelected;
     }
 
     public ArrayList<Langues> getListLangues() {
@@ -249,5 +256,117 @@ public class RootarBean implements Serializable {
 
     public void setListLangues(ArrayList<Langues> listLangues) {
         this.listLangues = listLangues;
+    }
+
+    public Monnaie getMonnaieSelected() {
+        return monnaieSelected;
+    }
+
+    public void setMonnaieSelected(Monnaie monnaieSelected) {
+        this.monnaieSelected = monnaieSelected;
+    }
+
+    public ArrayList<Monnaie> getListMonnaie() {
+        return listMonnaie;
+    }
+
+    public void setListMonnaie(ArrayList<Monnaie> listMonnaie) {
+        this.listMonnaie = listMonnaie;
+    }
+
+    public Objet getObjetSelected() {
+        return objetSelected;
+    }
+
+    public void setObjetSelected(Objet objetSelected) {
+        this.objetSelected = objetSelected;
+    }
+
+    public ArrayList<Objet> getListObjet() {
+        return listObjet;
+    }
+
+    public void setListObjet(ArrayList<Objet> listObjet) {
+        this.listObjet = listObjet;
+    }
+
+    public Priorite getPrioriteSelected() {
+        return prioriteSelected;
+    }
+
+    public void setPrioriteSelected(Priorite prioriteSelected) {
+        this.prioriteSelected = prioriteSelected;
+    }
+
+    public ArrayList<Priorite> getListPriorite() {
+        return listPriorite;
+    }
+
+    public void setListPriorite(ArrayList<Priorite> listPriorite) {
+        this.listPriorite = listPriorite;
+    }
+
+    public RepresentationEtrangere getRepEtrSelected() {
+        return repEtrSelected;
+    }
+
+    public void setRepEtrSelected(RepresentationEtrangere repEtrSelected) {
+        this.repEtrSelected = repEtrSelected;
+    }
+
+    public ArrayList<RepresentationEtrangere> getListRepEtr() {
+        return listRepEtr;
+    }
+
+    public void setListRepEtr(ArrayList<RepresentationEtrangere> listRepEtr) {
+        this.listRepEtr = listRepEtr;
+    }
+
+    public Sante getSanteSelected() {
+        return santeSelected;
+    }
+
+    public void setSanteSelected(Sante santeSelected) {
+        this.santeSelected = santeSelected;
+    }
+
+    public ArrayList<Sante> getListSante() {
+        return listSante;
+    }
+
+    public void setListSante(ArrayList<Sante> listSante) {
+        this.listSante = listSante;
+    }
+
+    public TypeClimat getTypeClimatSelected() {
+        return typeClimatSelected;
+    }
+
+    public void setTypeClimatSelected(TypeClimat typeClimatSelected) {
+        this.typeClimatSelected = typeClimatSelected;
+    }
+
+    public ArrayList<TypeClimat> getListTypeClimat() {
+        return listTypeClimat;
+    }
+
+    public void setListTypeClimat(ArrayList<TypeClimat> listTypeClimat) {
+        this.listTypeClimat = listTypeClimat;
+    }
+
+    public TypeVisas getTypeVisasSelected() {
+        return typeVisasSelected;
+    }
+
+    public void setTypeVisasSelected(TypeVisas typeVisasSelected) {
+        this.typeVisasSelected = typeVisasSelected;
+    }
+
+    public ArrayList<TypeVisas> getListTypeVisas() {
+        return listTypeVisas;
+    }
+
+    public void setListTypeVisas(ArrayList<TypeVisas> listTypeVisas) {
+        this.listTypeVisas = listTypeVisas;
     }
 }
