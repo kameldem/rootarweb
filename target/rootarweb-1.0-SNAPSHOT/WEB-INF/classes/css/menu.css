@@ -1,8 +1,22 @@
-#header,div{
+#header,footer{
     align-content: center;
     text-align: center;
-    background-color: mediumaquamarine;
+    background-color: whitesmoke;
 }
+
+#footer{
+    align-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#content{
+    align-content: center;
+    text-align: center;
+}
+
+
+
 .product-item .product-item-content {
     border: 1px solid var(--surface-d);
     border-radius: 3px;

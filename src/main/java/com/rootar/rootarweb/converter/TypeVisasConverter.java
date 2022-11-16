@@ -8,7 +8,7 @@ import jakarta.faces.convert.Converter;
 import jakarta.faces.convert.FacesConverter;
 import jakarta.inject.Inject;
 
-@FacesConverter(value="typeClimatConverter", managed = true)
+@FacesConverter(value="typeVisasConverter", managed = true)
 public class TypeVisasConverter implements Converter {
 
     @Inject

@@ -8,7 +8,11 @@
       xmlns:p="http://primefaces.org/ui">
 <ui:composition>
     <div>
-        <h:form id="form">
+    <img src="./faces/logo_transparent.png" alt="logo" width="160" height="160"></img>
+    </div>
+
+    <div>
+        <h:form >
             <div class="card">
                 <p:carousel id="continents" value="#{rootarBean.listContinent}" var="continent" numVisible="6" numScroll="3">
                     <f:facet name="header">
@@ -30,6 +34,16 @@
 
         </h:form>
     </div>
+    <div class="card">
+        <h:form>
+            <p:breadCrumb>
+                <p:menuitem value="Home"/>
+                <p:menuitem value="Login"/>
+
+            </p:breadCrumb>
+        </h:form>
+    </div>
+
 </ui:composition>
 
 </html>

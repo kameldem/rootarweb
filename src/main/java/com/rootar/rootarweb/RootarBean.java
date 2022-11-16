@@ -1,11 +1,13 @@
 package com.rootar.rootarweb;
 
-import com.rootar.rootarweb.converter.EvenementsConverter;
 import com.rootar.rootarweb.dao.DAOFactory;
 import com.rootar.rootarweb.metier.*;
+import com.rootar.rootarweb.service.RootarSearch;
+import com.rootar.rootarweb.service.ServiceRootar;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.FacesContext;
+import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
 import java.io.IOException;
@@ -53,25 +55,83 @@ public class RootarBean implements Serializable {
     private TypeVisas typeVisasSelected;
     private ArrayList<TypeVisas> listTypeVisas;
 
+    private RootarSearch rootarSearch;
 
 
 
-    public RootarBean() {
-        continentSelected=new Continent();
 
-    }
     @PostConstruct
     private void init(){
+
+    rootarSearch = new RootarSearch();
+
     listContinent=DAOFactory.getContinentDAO().getAll();
+    Continent continent = new Continent(0, "Choisir un Continent");
+    listContinent.add(0, continent);
+
+    listPays=DAOFactory.getPaysDAO().getAll();
+    Pays pays = new Pays(0, "Choisir un Pays");
+    listPays.add(0, pays);
+
+    listVille=DAOFactory.getVilleDAO().getAll();
+    Ville ville = new Ville(0, "Choisir une Ville");
+    listVille.add(0, ville);
+
+    listThemes=DAOFactory.getThemesDAO().getAll();
+    Themes themes = new Themes(0, "Choisir un Theme");
+    listThemes.add(0, themes);
+
+    listTypeClimat=DAOFactory.getTypeClimatDAO().getAll();
+    TypeClimat typeClimat = new TypeClimat(0, "Choisir un Type Climat");
+    listTypeClimat.add(0, typeClimat);
+
+    listPays=DAOFactory.getPaysDAO().getLike(rootarSearch);
 
     }
+
+
     public void show(Continent continent){
         continentSelected=continent;
         listPays=DAOFactory.getPaysDAO().getPaysByContinent(continentSelected.getIdContinent());
 
     }
+
     public void buttonAction() throws IOException {
-        FacesContext.getCurrentInstance().getExternalContext().redirect("./payseurope.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect("./paysContinents.xhtml");
+    }
+
+    public void continentListener(){
+        if (continentSelected.getIdContinent() != 0){
+            listPays = DAOFactory.getPaysDAO().getPaysByContinent(continentSelected.getIdContinent());
+        } else {
+            listPays = DAOFactory.getPaysDAO().getAll();
+            Pays pays = new Pays(0, "Choisir un pays");
+            listPays.add(0, pays);
+        }
+    }
+
+    public void paysListener(){
+        if (paysSelected.getIdPays() != 0){
+            continentSelected = DAOFactory.getContinentDAO().getByID(paysSelected.getContinent().getIdContinent());
+            listContinent = new ArrayList<>();
+            listContinent.add(paysSelected.getContinent());
+        } else {
+            listContinent=DAOFactory.getContinentDAO().getAll();
+            Continent continent = new Continent(0, "Choisir un continent");
+            listContinent.add(0, continent);
+        }
+    }
+
+    public void regionListener(){
+        if (regionSelected.getIdRegion() != 0){
+            paysSelected = DAOFactory.getPaysDAO().getByID(regionSelected.getPays().getIdPays());
+            listPays = new ArrayList<>();
+            listPays.add(regionSelected.getPays());
+        }else{
+            listPays = DAOFactory.getPaysDAO().getAll();
+            Pays pays = new Pays(0, "Choisir un pays");
+            listPays.add(0, pays);
+        }
     }
 
     public String getNomIMage() {

@@ -3,9 +3,11 @@ package com.rootar.rootarweb.service;
 
 import com.rootar.rootarweb.dao.DAOFactory;
 import com.rootar.rootarweb.metier.*;
-
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Named;
 
 import java.util.ArrayList;
+
 
 public class ServiceRootar {
 
@@ -14,6 +16,7 @@ public class ServiceRootar {
     private ArrayList<Ville> villeFiltre;
     private ArrayList<Themes> themeFiltre;
     private ArrayList<TypeClimat> typeClimatFiltre;
+
 
     public ServiceRootar() {
         paysFiltre = DAOFactory.getPaysDAO().getAll();
