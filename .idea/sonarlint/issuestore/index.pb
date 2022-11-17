@@ -17,8 +17,6 @@ i
 9src/main/java/com/rootar/rootarweb/dao/RootarConnect.java,a\b\ab0c32730e1632a980dd7ac14571a36da12ff88b
 l
 <src/main/java/com/rootar/rootarweb/service/RootarSearch.java,a\f\af5adf8501dbba12bea728a0a1ae0132ba0f587d
-l
-<src/main/java/com/rootar/rootarweb/dao/DonneesClimatDAO.java,f\b\fbda15d6ff0e83f37462d90c25aa5c3eb1705f55
 g
 7src/main/java/com/rootar/rootarweb/metier/Emporter.java,9\1\91e246c9a7bd2a84a09ec35561eb3848edba6b69
 g
@@ -31,8 +29,6 @@ g
 7src/main/java/com/rootar/rootarweb/metier/Priorite.java,4\e\4eb7dbe3766cdc957f9c31a1e70804f50a58345f
 v
 Fsrc/main/java/com/rootar/rootarweb/dao/RepresentationEtrangereDAO.java,4\7\4795d4c25e70113fb7c65ee07e92a4534e18d3f6
-l
-<src/main/java/com/rootar/rootarweb/metier/DonneesClimat.java,9\9\99ae8a1dc3ab9f3f144b11266df59fecc5988e1c
 d
 4src/main/java/com/rootar/rootarweb/metier/Visas.java,1\a\1aa5bc0de1c3cc15062c32c559996f3964c19b6e
 h
@@ -43,8 +39,6 @@ p
 @src/main/java/com/rootar/rootarweb/converter/VisasConverter.java,9\9\9978090f9e931c1ef48fe3a7df28a33dcc29cce5
 u
 Esrc/main/java/com/rootar/rootarweb/converter/CategoriesConverter.java,0\b\0b02c201e26987277d0bd5121acaef676317c3c9
-x
-Hsrc/main/java/com/rootar/rootarweb/converter/DonneesClimatConverter.java,e\7\e7af122659c0e422979a50c3800a75cebfcb25b8
 u
 Esrc/main/java/com/rootar/rootarweb/converter/EvenementsConverter.java,0\f\0f3dc04af3450fbfdd4c313342687c83a8346673
 t
@@ -71,8 +65,6 @@ X
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 =
 rootarweb.iml,a\8\a8f727ac5ba7795a4256a2f786514eeb19486cdd
-Q
-!src/main/webapp/faces/index.xhtml,9\d\9d406a308083c3ecfd41ad80a095df42b2535b1c
 h
 8src/main/java/com/rootar/rootarweb/metier/Continent.java,0\d\0d6c327f3066c5b87a41482b4ef76af11601c399
 d
@@ -87,7 +79,5 @@ o
 ?src/main/java/com/rootar/rootarweb/converter/PaysConverter.java,3\b\3b9d2590fcbcc2c29fe6571bba66b2fe068a20b1
 q
 Asrc/main/java/com/rootar/rootarweb/converter/RegionConverter.java,f\b\fb8d2f1c70c6e160da5b832d96af4623f7c83b8b
-e
-5src/main/java/com/rootar/rootarweb/dao/ThemesDAO.java,b\7\b715ef316bfb16a71cf6a818562a698ee6c33941
 e
 5src/main/java/com/rootar/rootarweb/metier/Themes.java,9\b\9b7db2845f549fb844917f7bb884fa832e28bd2b

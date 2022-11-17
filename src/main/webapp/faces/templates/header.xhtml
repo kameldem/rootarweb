@@ -7,9 +7,15 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <ui:composition>
-    <div>
-    <img src="./faces/logo_transparent.png" alt="logo" width="160" height="160"></img>
+
+
+
+    <div id="entete"> <img src="./faces/logo_transparent.png" alt="logo" width="160" height="160"></img>
+
+    <a href="src/main/webapp/faces/test.xhtml"><p:avatar icon="pi pi-user" styleClass="mr-2" size="xlarge" shape="circle"/></a>
     </div>
+
+
 
     <div>
         <h:form >
@@ -20,7 +26,7 @@
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <h:commandLink  action="#{rootarBean.buttonAction()}" actionListener="#{rootarBean.show(continent)}" >
+                                <h:commandLink  action="#{rootarBean.buttonAction()}" actionListener="#{rootarBean.showContinent(continent)}" >
                                     <h:graphicImage value="./faces/#{continent.nomContinentFr}.png"  style="border:0px;"/>
 
                                 </h:commandLink>
@@ -34,15 +40,30 @@
 
         </h:form>
     </div>
-    <div class="card">
-        <h:form>
-            <p:breadCrumb>
-                <p:menuitem value="Home"/>
-                <p:menuitem value="Login"/>
+    <div>
+        <h:form >
+            <div class="card">
+                <p:carousel id="themes" value="#{rootarBean.listThemesCar}" var="theme" numVisible="4" numScroll="3">
+                    <f:facet name="header">
+                    </f:facet>
+                    <div class="product-item">
+                        <div class="product-item-content">
+                            <div class="mb-3">
+                                <h:commandLink  action="#{rootarBean.buttonActionThemes()}" actionListener="#{rootarBean.showThemes(theme)}" >
+                                    <h:graphicImage value="./faces/#{theme.libelleThemes}.jpg"  style="border:0px;"/>
 
-            </p:breadCrumb>
+                                </h:commandLink>
+                                <h4 class="mb-1">#{theme.libelleThemes}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </p:carousel>
+
+            </div>
+
         </h:form>
     </div>
+
 
 </ui:composition>
 

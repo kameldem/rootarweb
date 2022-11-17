@@ -5,6 +5,7 @@ import com.rootar.rootarweb.metier.*;
 import com.rootar.rootarweb.service.RootarSearch;
 import com.rootar.rootarweb.service.ServiceRootar;
 import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
@@ -15,7 +16,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 @Named("rootarBean")
-@SessionScoped
+@ApplicationScoped
 public class RootarBean implements Serializable {
     private String nomIMage;
     private Continent continentSelected;
@@ -34,6 +35,7 @@ public class RootarBean implements Serializable {
     private ArrayList<Region> listRegion;
     private Themes themesSelected;
     private ArrayList<Themes> listThemes;
+    private ArrayList<Themes> listThemesCar;
     private Visas visasSelected;
     private ArrayList<Visas> listVisas;
     private Evenements evenementsSelected;
@@ -54,28 +56,35 @@ public class RootarBean implements Serializable {
     private ArrayList<TypeClimat> listTypeClimat;
     private TypeVisas typeVisasSelected;
     private ArrayList<TypeVisas> listTypeVisas;
+    private ArrayList<Continent> listContinentCombo;
 
     private RootarSearch rootarSearch;
 
 
+    public RootarBean() {
 
+
+    }
 
     @PostConstruct
     private void init(){
 
-    rootarSearch = new RootarSearch();
+        rootarSearch = new RootarSearch();
 
-    listContinent=DAOFactory.getContinentDAO().getAll();
-    Continent continent = new Continent(0, "Choisir un Continent");
-    listContinent.add(0, continent);
+        listContinent=DAOFactory.getContinentDAO().getAll();
 
-    listPays=DAOFactory.getPaysDAO().getAll();
-    Pays pays = new Pays(0, "Choisir un Pays");
-    listPays.add(0, pays);
 
-    listVille=DAOFactory.getVilleDAO().getAll();
-    Ville ville = new Ville(0, "Choisir une Ville");
-    listVille.add(0, ville);
+        listThemesCar=DAOFactory.getThemesDAO().getAll();
+
+        listContinentCombo=DAOFactory.getContinentDAO().getAll();
+        listContinentCombo.add(0,new Continent(0,"Choisir un continent"));
+        listPays=DAOFactory.getPaysDAO().getAll();
+        listPays.add(0,new Pays(0,"choisir un pays"));
+
+
+        listVille=DAOFactory.getVilleDAO().getAll();
+        Ville ville = new Ville(0, "Choisir une Ville");
+        listVille.add(0, ville);
 
     listThemes=DAOFactory.getThemesDAO().getAll();
     Themes themes = new Themes(0, "Choisir un Theme");
@@ -85,21 +94,29 @@ public class RootarBean implements Serializable {
     TypeClimat typeClimat = new TypeClimat(0, "Choisir un Type Climat");
     listTypeClimat.add(0, typeClimat);
 
-    listPays=DAOFactory.getPaysDAO().getLike(rootarSearch);
+
+    //listPays=DAOFactory.getPaysDAO().getLike(rootarSearch);
 
     }
 
 
-    public void show(Continent continent){
+    public void showContinent(Continent continent){
         continentSelected=continent;
         listPays=DAOFactory.getPaysDAO().getPaysByContinent(continentSelected.getIdContinent());
+
+    }
+    public void showThemes(Themes themes){
+        themesSelected=themes;
+        listPays=DAOFactory.getPaysDAO().getPaysByThemes(themes);
 
     }
 
     public void buttonAction() throws IOException {
         FacesContext.getCurrentInstance().getExternalContext().redirect("./paysContinents.xhtml");
     }
-
+    public void buttonActionThemes() throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect("./paysThemes.xhtml");
+    }
     public void continentListener(){
         if (continentSelected.getIdContinent() != 0){
             listPays = DAOFactory.getPaysDAO().getPaysByContinent(continentSelected.getIdContinent());
@@ -428,5 +445,21 @@ public class RootarBean implements Serializable {
 
     public void setListTypeVisas(ArrayList<TypeVisas> listTypeVisas) {
         this.listTypeVisas = listTypeVisas;
+    }
+
+    public ArrayList<Continent> getListContinentCombo() {
+        return listContinentCombo;
+    }
+
+    public void setListContinentCombo(ArrayList<Continent> listContinentCombo) {
+        this.listContinentCombo = listContinentCombo;
+    }
+
+    public ArrayList<Themes> getListThemesCar() {
+        return listThemesCar;
+    }
+
+    public void setListThemesCar(ArrayList<Themes> listThemesCar) {
+        this.listThemesCar = listThemesCar;
     }
 }
