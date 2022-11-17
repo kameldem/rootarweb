@@ -7,7 +7,44 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <f:view>
+
     <h:form id="form">
+
+        <p:panelGrid columns="3" layout="grid" >
+
+        <p:selectOneMenu id="selectMenuContinent" value="#{rootarBean.continentSelected}" dynamic="true">
+            <f:selectItems value="#{rootarBean.listContinent}"/>
+            <f:converter converterId="continentConverter"/>
+            <p:ajax update=":form:selectMenuPays" listener="#{rootarBean.continentListener}"/>
+        </p:selectOneMenu>
+
+        <p:selectOneMenu id="selectMenuPays" value="#{rootarBean.paysSelected}" dynamic="true" styleClass="flag flag-#{rootarBean.paysSelected.getCodePays()}">
+            <f:selectItems value="#{rootarBean.listPays}"/>
+            <p:ajax update=":form:selectMenuContinent" listener="#{rootarBean.paysListener}"/>
+            <f:converter converterId="paysConverter"/>
+        </p:selectOneMenu>
+
+        <p:selectOneMenu id="selectMenuVille" value="#{rootarBean.villeSelected}" dynamic="true">
+            <f:selectItems value="#{rootarBean.listVille}"/>
+            <f:converter converterId="villeConverter"/>
+        </p:selectOneMenu>
+
+        <p:selectOneMenu id="selectMenuTheme" value="#{rootarBean.themesSelected}" dynamic="true">
+            <f:selectItems value="#{rootarBean.listThemes}"/>
+            <f:converter converterId="themeConverter"/>
+        </p:selectOneMenu>
+
+        <p:selectOneMenu id="selectMenuClimat" value="#{rootarBean.typeClimatSelected}" dynamic="true">
+            <f:selectItems value="#{rootarBean.listTypeClimat}"/>
+            <f:converter converterId="typeClimatConverter"/>
+        </p:selectOneMenu>
+
+        <p:commandButton value="Filtrer" update=""  icon="pi pi-filter" styleClass="ui-button-outlined ui-button-info"/>
+
+        </p:panelGrid>
+
+
+
         <p:dataTable id="idrootar" widgetVar="rootars" var="rootar" value="#{rootarBean.listPays}"
                      reflow="true" styleClass="products-table" selection="#{rootarBean.paysSelected}"
                      rowKey="#{rootar.idPays}" paginator="true" rows="10" rowSelectMode="add" paginatorPosition="bottom">

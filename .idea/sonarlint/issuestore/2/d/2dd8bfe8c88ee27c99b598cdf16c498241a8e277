@@ -1,4 +1,6 @@
 
+e
+java:S3776"PRefactor this method to reduce its Cognitive Complexity from 4 to the 3 allowed.(ªˆÜ<
 K
 java:S1117 "6Rename "rs" which hides the field declared at line 13.(áÑÄI
 S	java:S1061"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ

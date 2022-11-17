@@ -10,23 +10,23 @@
     <h:head>
     </h:head>
 
-    <h:body style="background-image:url('img/entete.jpg');">
+    <h:body>
 
         <h:form>
+            <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true"/>
+
             <div class="card">
-                <p:dataTable var="pays" value="#{rootarBean.listPays}">
+                <h2>Liste des pays du continent</h2>
+                <p:orderList value="#{rootarBean.listPays}" var="pays" itemValue="#{rootarBean.listPays}"
+                             converter="#{PaysConverter}" controlsLocation="left" responsive="true">
 
-                    <p:column headerText="Code">
-                        <h:outputText value="#{pays.codePays}"/>
-                    </p:column>
 
-                    <p:column headerText="Name">
+                    <p:column>
                         <h:outputText value="#{pays.nomPaysFr}"/>
                     </p:column>
-
-
-                </p:dataTable>
+                </p:orderList>
             </div>
+
         </h:form>
 
     </h:body>

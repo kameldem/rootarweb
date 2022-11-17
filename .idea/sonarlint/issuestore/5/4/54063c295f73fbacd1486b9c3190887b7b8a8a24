@@ -1,0 +1,58 @@
+
+‹
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ô‹ª²ÿÿÿÿÿ
+‹
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ÿœ¦®ıÿÿÿÿ
+‹
+java:S1319#"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ŒÔ®½úÿÿÿÿ
+‹
+java:S1319'"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ğÔêÜÿÿÿÿÿ
+†
+java:S1319+"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ìåœ¹
+‹
+java:S13194"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Õ—ˆıÿÿÿÿ
+†
+java:S13197"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™½ÊÎ
+‹
+java:S13199"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ôƒ®—üÿÿÿÿ
+‹
+java:S1319:"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™ôÅ®ıÿÿÿÿ
+†
+java:S1319D"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÿ‰âÀ
+†
+java:S1319H"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(·Üöú
+†
+java:S1319K"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ì²Ç‘
+‹
+java:S1319X"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(×ş€ıÿÿÿÿ
+…
+java:S1319b"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ù¸Í2
+‹
+java:S1319c"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹ê‰¹şÿÿÿÿ
+‹
+java:S1319h"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä¼‹£ıÿÿÿÿ
+†
+java:S1319k"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ì£íï
+‹
+java:S1319l"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(·Å˜ñıÿÿÿÿ
+†
+java:S1319n"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ãü«î
+‹
+java:S1319q"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(åÄıÿÿÿÿ
+†
+java:S1319t"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ê‘Ñÿ
+…
+java:S1319w"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™ê±[
+†
+java:S1319{"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(º‰§
+†
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¶´‘µ
+‡
+java:S1319‚"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¸ À¦
+Œ
+java:S1319…"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(„†ı‰øÿÿÿÿ
+Q	java:S125U"<This block of commented-out lines of code should be removed.(íì†§
+k
+java:S1128"IRemove this unused import 'jakarta.enterprise.context.ApplicationScoped'.(±ÇŸëøÿÿÿÿ8Ÿ‘ù„È0
+N
+java:S1128"1Remove this unused import 'jakarta.inject.Named'.(¡†Š8Ÿ‘ù„È0
