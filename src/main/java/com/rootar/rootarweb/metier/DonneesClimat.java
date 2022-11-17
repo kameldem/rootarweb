@@ -84,4 +84,12 @@ public class DonneesClimat {
     public void setTauxHumidite(int tauxHumidite) {
         this.tauxHumidite = tauxHumidite;
     }
+
+    public int getIdRegion() {
+        return idRegion;
+    }
+
+    public void setIdRegion(int idRegion) {
+        this.idRegion = idRegion;
+    }
 }

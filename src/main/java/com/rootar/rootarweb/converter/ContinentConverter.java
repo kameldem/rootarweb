@@ -2,7 +2,6 @@ package com.rootar.rootarweb.converter;
 
 import com.rootar.rootarweb.RootarBean;
 import com.rootar.rootarweb.metier.Continent;
-import com.rootar.rootarweb.metier.Pays;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.convert.Converter;
@@ -25,7 +24,6 @@ public class ContinentConverter implements Converter {
             }
         }
         return null;
-
     }
 
 

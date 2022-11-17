@@ -28,4 +28,9 @@ public class TypeClimat {
     public void setLibelleTypeClimat(String libelleTypeClimat) {
         this.libelleTypeClimat = libelleTypeClimat;
     }
+
+    @Override
+    public String toString() {
+        return libelleTypeClimat;
+    }
 }

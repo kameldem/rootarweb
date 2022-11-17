@@ -1,0 +1,14 @@
+
+†
+java:S1319Z"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¤ÎÕë
+‹
+java:S1319u"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ñƒ¶ûÿÿÿÿ
+k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÌñµúÿÿÿÿ
+f	java:S117w"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïôä
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç³š€
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èùĞÑ
+V	java:S1258"<This block of commented-out lines of code should be removed.(¦Ÿ©‘øÿÿÿÿ
+y
+java:S4087Ì"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ıÆ“¾
+F
+java:S2695Ê"0This "PreparedStatement" only has 14 parameters.(¢ï„B

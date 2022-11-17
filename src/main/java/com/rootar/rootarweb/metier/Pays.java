@@ -29,7 +29,14 @@ public class Pays {
         monnaie = new Monnaie();
         visas = new Visas();
     }
-
+    public Pays(int idPays, String codePays ,String nomPaysFr) {
+        this.idPays = idPays;
+        this.codePays = codePays;
+        this.nomPaysFr = nomPaysFr;
+        continent = new Continent();
+        monnaie = new Monnaie();
+        visas = new Visas();
+    }
     public Pays(int idPays, String codePays,String nomPaysFr,  String nomPaysAng, String nationalite,int nbreHabitant,  int superficie, String devise, String feteNationale, String indicatifTel,Continent continent,Monnaie monnaie, Ville ville) {
         this.idPays = idPays;
         this.nomPaysFr = nomPaysFr;

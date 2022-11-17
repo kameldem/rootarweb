@@ -27,6 +27,13 @@ public class Region {
         this.typeClimat = typeClimat;
     }
 
+    public Region(int idRegion, String nomRegion, Pays pays, TypeClimat typeClimat) {
+        this.idRegion = idRegion;
+        this.nomRegion = nomRegion;
+        this.pays = pays;
+        this.typeClimat = typeClimat;
+    }
+
     public int getIdRegion() {
         return idRegion;
     }
