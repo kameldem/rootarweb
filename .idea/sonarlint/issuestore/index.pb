@@ -13,8 +13,6 @@ i
 9src/main/java/com/rootar/rootarweb/dao/CategoriesDAO.java,6\6\66e71fe9c5ac95a2220bd2b3578bfdebdc48a367
 i
 9src/main/java/com/rootar/rootarweb/dao/EvenementsDAO.java,c\3\c375beccb640f0548a8237b6cbc1906ad24b81a0
-i
-9src/main/java/com/rootar/rootarweb/dao/RootarConnect.java,a\b\ab0c32730e1632a980dd7ac14571a36da12ff88b
 l
 <src/main/java/com/rootar/rootarweb/service/RootarSearch.java,a\f\af5adf8501dbba12bea728a0a1ae0132ba0f587d
 g
@@ -61,8 +59,6 @@ O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 X
 (src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 =
 rootarweb.iml,a\8\a8f727ac5ba7795a4256a2f786514eeb19486cdd
 h

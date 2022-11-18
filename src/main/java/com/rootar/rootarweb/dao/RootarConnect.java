@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 
 public class RootarConnect {
 
-    private final static String SERVER_NAME="10.115.58.232";
+    private final static String SERVER_NAME="127.0.0.1";
     private final static int PORT_NUMBER =1401;
     private final static String DATABASE_NAME="ROOTAR";
 
