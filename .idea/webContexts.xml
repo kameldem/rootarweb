@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/faces/détailsPays.xhtml" value="file://$PROJECT_DIR$/src/main/webapp/faces" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/faces/loginform.xhtml" value="file://$PROJECT_DIR$/src/main/webapp/faces" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/faces/payseurope.xhtml" value="file://$PROJECT_DIR$/src/main/webapp/faces" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/faces/templates/menu.xhtml" value="file://$PROJECT_DIR$/src/main/webapp/faces/templates" />
       </map>
