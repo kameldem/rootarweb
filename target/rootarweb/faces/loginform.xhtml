@@ -18,28 +18,30 @@
         <div class="field grid">
             <p:outputLabel for="prenom" styleClass="col-fixed" style="width:100px" value="Prénom"/>
             <div class="col">
-                <p:inputText id="prenom"/>
+                <p:inputText id="prenom" value="#{loginBean.newUsr.prenom}"/>
             </div>
         </div>
         <div class="field grid">
             <p:outputLabel for="nom" styleClass="col-fixed" style="width:100px" value="Nom"/>
             <div class="col">
-                <p:inputText id="nom"/>
+                <p:inputText id="nom" value="#{loginBean.newUsr.nom}"/>
             </div>
 
         </div>
                  <div class="field grid">
             <p:outputLabel for="mail" styleClass="col-fixed" style="width:100px" value="Email"/>
             <div class="col">
-                <p:inputText id="mail"/>
+                <p:inputText id="mail" value="#{loginBean.newUsr.mail}"/>
             </div>
         </div>
         <div class="field grid">
             <p:outputLabel for="password" styleClass="col-fixed" style="width:100px" value="Mot de passe"/>
             <div class="col">
-                <p:inputText id="password"/>
+                <p:inputText id="password" value="#{loginBean.newUsr.password}"/>
             </div>
         </div><p:commandButton value="valider" action="#{loginBean.login}"/>
+                 <p:commandButton value="Save" icon="pi pi-check" actionListener="#{loginBean.login}"
+                  />
     </div>
 
         </h:form>
