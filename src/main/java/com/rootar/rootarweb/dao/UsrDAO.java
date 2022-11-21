@@ -76,6 +76,29 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
 
         return null;
     }
+    public Usr searchBymail(String mail){
+       Usr usrFind=new Usr();
+        String SQL= " select * from USR  where MAIL_USR=?";
+        try (PreparedStatement pstmt = connexion.prepareStatement(SQL)){
+
+            // Determine the column set column
+
+            pstmt.setString(1,mail);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+
+                usrFind=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+            }
+            rs.close();
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return usrFind;
+
+    }
   @Override
     public Usr getByID(int id) {
         Usr newUsr= new Usr();
@@ -113,6 +136,7 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
                 pStmt.setString(2,usr.getPrenom());
                 pStmt.setString(3, usr.getMail());
                 pStmt.setString(4, usr.getPassword());
+                System.out.println("++"+usr.getPassword()+"++");
 
                 pStmt.execute();
             }

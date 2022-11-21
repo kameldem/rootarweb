@@ -15,10 +15,10 @@
 
         <span>
 
-        <p:commandButton  icon="pi pi-user" action="/faces/inscriptionform.xhtml" styleClass="mr-2" size="xlarge" shape="circle"
-                          oncomplete="PF('manageProductDialog').show()" process="@this">
+        <p:commandButton  icon="pi pi-user"  styleClass="mr-2" size="xlarge" shape="circle"
+                          oncomplete="PF('connexionUser').show()" process="@this"></p:commandButton>
 
-                    <p:resetInput target=":dialogs:manage-product-content" />
+
         <p:link style="color: yellow" outcome="inscriptionform" value="Connexion"></p:link>
         <p:link style="color: yellow" outcome="inscriptionform" value="Inscrivez-vous"></p:link>
         </span>
@@ -26,9 +26,34 @@
 
 
     </div>
+    <h:form id="dialogsUser">
+    <p:dialog header="connexion utilisateur" showEffect="fade" modal="true" widgetVar="connexionUser"
+              responsive="true">
+        <p:outputPanel id="manage-user-content" class="ui-fluid">
+            <p:outputPanel rendered="#{not empty loginBean.newUsr}">
+                <h:panelGrid columns="2" cellpadding="5">
+
+                    <p:outputLabel for="mail">Email</p:outputLabel>
+                    <p:inputText id="mail" value="#{loginBean.mail}" required="true" />
 
 
-   
+                    <p:outputLabel for="password">Mot de passe</p:outputLabel>
+                    <p:password id="password" value="#{loginBean.password}" toggleMask="true" redisplay="true" required="true"/>
+
+                </h:panelGrid>
+            </p:outputPanel>
+        </p:outputPanel>
+
+        <f:facet name="footer">
+            <p:commandButton value="Cancel" icon="pi pi-times"  onclick="PF('manageProductDialog').hide()"
+                             class="ui-button-secondary" type="button" />
+            <p:commandButton value="Connexion" icon="pi pi-check" action="#{loginBean.loginIn}"
+                             process="manage-user-content @this" />
+
+        </f:facet>
+    </p:dialog>
+
+    </h:form>
 
     <div>
         <h:form >
