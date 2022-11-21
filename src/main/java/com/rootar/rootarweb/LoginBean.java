@@ -14,6 +14,7 @@ import java.util.ArrayList;
 @ApplicationScoped
 public class LoginBean implements Serializable {
    private boolean resultInsert;
+   private Usr newUsr;
     private int idUsr;
     private String nom;
     private String prenom;
@@ -25,6 +26,7 @@ public class LoginBean implements Serializable {
         this.prenom="";
         this.mail="";
         this.password="";
+        this.newUsr=new Usr();
     }
     @PostConstruct
     private void init() {
@@ -85,12 +87,20 @@ public class LoginBean implements Serializable {
         usr.setPrenom("titi");
         usr.setMail("vador@gmail.com");
         usr.setPassword("somepassword");
-        resultInsert = DAOFactory.getUsrDAO().insert(usr);
+        resultInsert = DAOFactory.getUsrDAO().insert(newUsr);
         System.out.println(resultInsert);
             if (resultInsert)
                 System.out.println("ajout");
             else
                 System.out.println("pb ajout");
 
+    }
+
+    public Usr getNewUsr() {
+        return newUsr;
+    }
+
+    public void setNewUsr(Usr newUsr) {
+        this.newUsr = newUsr;
     }
 }
