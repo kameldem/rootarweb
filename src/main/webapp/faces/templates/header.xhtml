@@ -13,14 +13,21 @@
     <div id="entete"> <img src="./faces/logo_transparent.png" alt="logo" width="160" height="160"></img>
 
 
+        <span>
 
-    <a href="/faces/test.xhtml"><p:avatar icon="pi pi-user" styleClass="mr-2" size="xlarge" shape="circle"/></a>
-         <p:avatar icon="pi pi-user" action="/faces/loginform.xhtml" styleClass="mr-2" size="xlarge" shape="circle"/>
+        <p:commandButton  icon="pi pi-user" action="/faces/inscriptionform.xhtml" styleClass="mr-2" size="xlarge" shape="circle"
+                          oncomplete="PF('manageProductDialog').show()" process="@this">
+
+                    <p:resetInput target=":dialogs:manage-product-content" />
+        <p:link style="color: yellow" outcome="inscriptionform" value="Connexion"></p:link>
+        <p:link style="color: yellow" outcome="inscriptionform" value="Inscrivez-vous"></p:link>
+        </span>
+
+
+
     </div>
 
-    <p:commandButton icon="pi pi-user" action="/faces/loginform.xhtml" styleClass="mr-2" size="xlarge" shape="circle"/>
-        <p:linkButton outcome="/faces/test.xhtml" value="Bookmark" style="margin-right:20px;">
-        </p:linkButton>
+
    
 
     <div>
