@@ -31,7 +31,7 @@ public class LoginBean implements Serializable {
     @PostConstruct
     private void init() {
         listUsr= DAOFactory.getUsrDAO().getAll();
-        resultInsert=true;
+        resultInsert=false;
 
     }
 
@@ -82,11 +82,8 @@ public class LoginBean implements Serializable {
 
     public void login() {
 
-        Usr usr=new Usr();
-        usr.setNom("toto");
-        usr.setPrenom("titi");
-        usr.setMail("vador@gmail.com");
-        usr.setPassword("somepassword");
+        System.out.println(newUsr.getPrenom());
+
         resultInsert = DAOFactory.getUsrDAO().insert(newUsr);
         System.out.println(resultInsert);
             if (resultInsert)
