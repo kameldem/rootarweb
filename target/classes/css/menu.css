@@ -3,6 +3,7 @@
     text-align: center;
     background-color: whitesmoke;
 
+
 }
 
 #footer{
@@ -18,7 +19,9 @@
 #entete{
     display: flex;
     justify-content: space-between;
-
+  background-image: url("../faces/rootar.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
 }
 .grid-item {
 

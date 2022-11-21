@@ -70,32 +70,23 @@ public class RootarBean implements Serializable {
     private void init(){
 
         rootarSearch = new RootarSearch();
-
         listContinent=DAOFactory.getContinentDAO().getAll();
-
-
         listThemesCar=DAOFactory.getThemesDAO().getAll();
-
         listContinentCombo=DAOFactory.getContinentDAO().getAll();
         listContinentCombo.add(0,new Continent(0,"Choisir un continent"));
         listPays=DAOFactory.getPaysDAO().getAll();
         listPays.add(0,new Pays(0,"choisir un pays"));
-
-
         listVille=DAOFactory.getVilleDAO().getAll();
         Ville ville = new Ville(0, "Choisir une Ville");
         listVille.add(0, ville);
+        listThemes=DAOFactory.getThemesDAO().getAll();
+        Themes themes = new Themes(0, "Choisir un Theme");
+        listThemes.add(0, themes);
+        listTypeClimat=DAOFactory.getTypeClimatDAO().getAll();
+        TypeClimat typeClimat = new TypeClimat(0, "Choisir un Type Climat");
+        listTypeClimat.add(0, typeClimat);
 
-    listThemes=DAOFactory.getThemesDAO().getAll();
-    Themes themes = new Themes(0, "Choisir un Theme");
-    listThemes.add(0, themes);
-
-    listTypeClimat=DAOFactory.getTypeClimatDAO().getAll();
-    TypeClimat typeClimat = new TypeClimat(0, "Choisir un Type Climat");
-    listTypeClimat.add(0, typeClimat);
-
-
-    //listPays=DAOFactory.getPaysDAO().getLike(rootarSearch);
+        //listPays=DAOFactory.getPaysDAO().getLike(rootarSearch);
 
     }
 

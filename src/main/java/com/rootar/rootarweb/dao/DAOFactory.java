@@ -8,6 +8,7 @@ public class DAOFactory {
     }
 
     private static final Connection connexion = RootarConnect.getInstance();
+    public static UsrDAO getUsrDAO(){return new UsrDAO(connexion);}
     public static CategoriesDAO getCategoriesDAO(){
         return new CategoriesDAO(connexion);
     }
