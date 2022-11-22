@@ -48,8 +48,6 @@ Hsrc/main/java/com/rootar/rootarweb/converter/DonneesClimatConverter.java,e\7\e
 u
 Esrc/main/java/com/rootar/rootarweb/converter/EvenementsConverter.java,0\f\0f3dc04af3450fbfdd4c313342687c83a8346673
 t
-Dsrc/main/java/com/rootar/rootarweb/converter/AeroportsConverter.java,f\2\f2f1d71a469ed273c615d5898f9a6a133409b779
-t
 Dsrc/main/java/com/rootar/rootarweb/converter/ContinentConverter.java,a\f\af8007f57a23c97acca1623a57b3d59d86bc3099
 r
 Bsrc/main/java/com/rootar/rootarweb/converter/LanguesConverter.java,9\f\9fbbd1be9c12f7ed7d087a7d882eb6696b3fe150
