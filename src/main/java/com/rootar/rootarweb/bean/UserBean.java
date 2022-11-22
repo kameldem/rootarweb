@@ -1,25 +1,23 @@
-package com.rootar.rootarweb;
+package com.rootar.rootarweb.bean;
 
 import com.rootar.rootarweb.dao.DAOFactory;
 import com.rootar.rootarweb.metier.Usr;
 import jakarta.annotation.PostConstruct;
-import jakarta.el.MethodExpression;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.faces.application.FacesMessage;
-import jakarta.faces.context.FacesContext;
 import jakarta.inject.Named;
-import org.primefaces.PrimeFaces;
 
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 
 @Named("loginBean")
 @ApplicationScoped
-public class LoginBean implements Serializable {
+public class UserBean implements Serializable {
    private boolean resultInsert;
    private Usr newUsr;
     private int idUsr;
@@ -28,7 +26,7 @@ public class LoginBean implements Serializable {
     private String mail;
     private String password;
     private ArrayList<Usr>listUsr;
-    public LoginBean() {
+    public UserBean() {
         this.nom="";
         this.prenom="";
         this.mail="";
@@ -99,19 +97,18 @@ public class LoginBean implements Serializable {
                 System.out.println("pb ajout");
 
     }
-    public void loginIn() throws NoSuchAlgorithmException {
+    public void loginIn() throws NoSuchAlgorithmException, InvalidKeySpecException {
         FacesMessage message = null;
         boolean loggedIn = false;
         newUsr=DAOFactory.getUsrDAO().searchBymail(mail);
-        System.out.println(mail);
-        System.out.println(newUsr.getPassword());
-        String plainText = password;
+        System.out.println("hash java: " + get_SHA_512_SecurePassword(password));
+        System.out.println("hash bdd: " + newUsr.getPassword());
+        String hashBdd = get_SHA_512_SecurePassword(password);
 
-        MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
-        byte[] hash = messageDigest.digest( plainText.getBytes(StandardCharsets.UTF_8) );
+        if(validatePassword(get_SHA_512_SecurePassword(password),newUsr.getPassword())) {
+            System.out.println("equal");
 
-        System.out.println("Result: " + hash);
-
+         }
         /*if(mail != null && mail.equals(newUsr.getMail()) && password != null && password.equals(newUsr.getPassword())) {
             loggedIn = true;
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", newUsr.getPrenom());
@@ -126,7 +123,54 @@ public class LoginBean implements Serializable {
 
     }
 
+    private static String get_SHA_512_SecurePassword(String passwordToHash) {
+        String generatedPassword = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-512");
+            //md.update(salt.getBytes());
+            //String salt
+            byte[] bytes = md.digest(passwordToHash.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < bytes.length; i++) {
+                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16)
+                        .substring(1));
+            }
+            generatedPassword = sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return generatedPassword;
+    }
+    private static boolean validatePassword(String originalPassword, String storedPassword)
+            throws NoSuchAlgorithmException, InvalidKeySpecException
+    {
+        String[] parts = storedPassword.split(":");
+        int iterations = Integer.parseInt(parts[0]);
 
+        byte[] salt = fromHex(parts[1]);
+        byte[] hash = fromHex(parts[2]);
+
+        PBEKeySpec spec = new PBEKeySpec(originalPassword.toCharArray(),
+                salt, iterations, hash.length * 8);
+        SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        byte[] testHash = skf.generateSecret(spec).getEncoded();
+
+        int diff = hash.length ^ testHash.length;
+        for(int i = 0; i < hash.length && i < testHash.length; i++)
+        {
+            diff |= hash[i] ^ testHash[i];
+        }
+        return diff == 0;
+    }
+    private static byte[] fromHex(String hex) throws NoSuchAlgorithmException
+    {
+        byte[] bytes = new byte[hex.length() / 2];
+        for(int i = 0; i < bytes.length ;i++)
+        {
+            bytes[i] = (byte)Integer.parseInt(hex.substring(2 * i, 2 * i + 2), 16);
+        }
+        return bytes;
+    }
     public Usr getNewUsr() {
         return newUsr;
     }

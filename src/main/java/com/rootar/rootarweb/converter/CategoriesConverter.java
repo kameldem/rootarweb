@@ -1,7 +1,7 @@
 package com.rootar.rootarweb.converter;
 
 
-import com.rootar.rootarweb.RootarBean;
+import com.rootar.rootarweb.bean.RootarBean;
 import com.rootar.rootarweb.metier.Categories;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;

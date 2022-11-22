@@ -1,7 +1,6 @@
 package com.rootar.rootarweb.converter;
 
-import com.rootar.rootarweb.LoginBean;
-import com.rootar.rootarweb.RootarBean;
+import com.rootar.rootarweb.bean.UserBean;
 import com.rootar.rootarweb.metier.Usr;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
@@ -12,7 +11,7 @@ import jakarta.inject.Inject;
 @FacesConverter(value="usrConverter", managed = true)
 public class UsrConverter implements Converter {
     @Inject
-    private LoginBean loginBean;
+    private UserBean loginBean;
 
     @Override
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {

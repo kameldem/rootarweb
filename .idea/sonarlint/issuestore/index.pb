@@ -1,8 +1,4 @@
 
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-X
-(src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
 e
 5src/main/java/com/rootar/rootarweb/metier/Region.java,8\a\8a16774451f1f12ef944aee30911597c9ed2ef60
 g
@@ -35,3 +31,7 @@ i
 9src/main/java/com/rootar/rootarweb/dao/EvenementsDAO.java,c\3\c375beccb640f0548a8237b6cbc1906ad24b81a0
 f
 6src/main/java/com/rootar/rootarweb/dao/LanguesDAO.java,c\f\cf624436f79cf464e7372c5e2b2ab1797f44c85c
+P
+ src/main/webapp/faces/test.xhtml,6\f\6f90eb658bfb0a3bfbe9e4e2218dc50a4e1b014f
+=
+rootarweb.iml,a\8\a8f727ac5ba7795a4256a2f786514eeb19486cdd

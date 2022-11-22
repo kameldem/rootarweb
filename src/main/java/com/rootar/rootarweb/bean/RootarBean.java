@@ -1,12 +1,11 @@
-package com.rootar.rootarweb;
+package com.rootar.rootarweb.bean;
 
+import com.rootar.rootarweb.bean.ApplicationBean;
 import com.rootar.rootarweb.dao.DAOFactory;
 import com.rootar.rootarweb.metier.*;
 import com.rootar.rootarweb.service.RootarSearch;
-import com.rootar.rootarweb.service.ServiceRootar;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -18,6 +17,8 @@ import java.util.ArrayList;
 @Named("rootarBean")
 @ApplicationScoped
 public class RootarBean implements Serializable {
+@Inject
+ApplicationBean applicationBean;
     private String nomIMage;
     private Continent continentSelected;
     private ArrayList<Continent> listContinent;
@@ -103,7 +104,7 @@ public class RootarBean implements Serializable {
     }
 
     public void buttonAction() throws IOException {
-        FacesContext.getCurrentInstance().getExternalContext().redirect("./paysContinents.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect("./pays.xhtml");
     }
     public void buttonActionThemes() throws IOException {
         FacesContext.getCurrentInstance().getExternalContext().redirect("./paysThemes.xhtml");
