@@ -1,7 +1,9 @@
-#header,footer{
-    align-content: center;
+#header{
+    align-content: normal;
     text-align: center;
     background-color: whitesmoke;
+
+
 }
 
 #footer{
@@ -9,14 +11,26 @@
     text-align: center;
     background-color: whitesmoke;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
 
+}
+#entete{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../faces/rootar.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+.grid-item {
+
+    text-align: left;
+}
 #content{
     align-content: center;
     text-align: center;
 }
-
-
-
 .product-item .product-item-content {
     border: 1px solid var(--surface-d);
     border-radius: 3px;
@@ -35,3 +49,4 @@
 .ui-carousel{
     transform-style: preserve-3d;
 }
+

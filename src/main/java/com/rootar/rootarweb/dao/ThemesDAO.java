@@ -6,7 +6,6 @@ import com.rootar.rootarweb.metier.Region;
 import com.rootar.rootarweb.metier.Themes;
 import com.rootar.rootarweb.service.RootarSearch;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 

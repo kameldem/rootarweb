@@ -1,11 +1,9 @@
 package com.rootar.rootarweb.dao;
 
-import com.rootar.rootarweb.metier.*;
 import com.rootar.rootarweb.metier.Pays;
 import com.rootar.rootarweb.metier.Region;
 import com.rootar.rootarweb.metier.Ville;
 import com.rootar.rootarweb.service.RootarSearch;
-
 
 import java.sql.*;
 import java.util.ArrayList;

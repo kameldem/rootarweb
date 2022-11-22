@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  rootardb:
+    container_name: rootarsql
+    image: helene59/rootar_db
+    ports:
+      - "1433:1433"
+  rootarweb:
+
+    container_name: rootartomcat
+    image: helene59/rootartomcat
+    ports:
+      - "8080:8080"

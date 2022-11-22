@@ -2,7 +2,6 @@ package com.rootar.rootarweb.dao;
 
 
 import com.rootar.rootarweb.metier.Region;
-import com.rootar.rootarweb.metier.Themes;
 import com.rootar.rootarweb.metier.TypeClimat;
 
 import java.sql.Connection;

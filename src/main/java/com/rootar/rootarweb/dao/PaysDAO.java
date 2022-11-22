@@ -4,7 +4,6 @@ package com.rootar.rootarweb.dao;
 import com.rootar.rootarweb.metier.*;
 import com.rootar.rootarweb.service.RootarSearch;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -29,7 +28,9 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
 
             while (rs.next()) {
 
+
                 liste.add(new Pays(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6),rs.getInt(7),rs.getString(8),rs.getString(9),rs.getString(10),new Continent(rs.getInt(11),rs.getString(12)),new Monnaie(rs.getInt(13),rs.getString(14)), new Ville(rs.getInt(15),rs.getString(16))));
+
             }
             rs.close();
 
@@ -40,6 +41,7 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
         }
         return liste;
     }
+
 
     @Override
     public ArrayList<Pays> getLike(RootarSearch rootarSearch) {
@@ -90,7 +92,7 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
 public ArrayList<Pays> getPaysByContinent(int id){
     ArrayList<Pays> liste = new ArrayList<>();
 
-    String SQL= " select id_pays, nom_pays_fr, nom_pays_ang from pays as p where p.id_continent in (select id_continent from continent where id_continent=? )";
+    String SQL= " select id_pays, code_pays, nom_pays_fr, nom_pays_ang from pays as p where p.id_continent in (select id_continent from continent where id_continent=? )";
     try (PreparedStatement pstmt = connexion.prepareStatement(SQL)){
 
 
@@ -102,7 +104,7 @@ public ArrayList<Pays> getPaysByContinent(int id){
 
         while (rs.next()) {
 
-            liste.add(new Pays(rs.getInt(1),rs.getString(2)));
+            liste.add(new Pays(rs.getInt(1),rs.getString(2),rs.getString(3)));
         }
         rs.close();
 
@@ -139,7 +141,32 @@ public ArrayList<Pays> getPaysByContinent(int id){
         }
         return liste;
     }
+    public ArrayList<Pays> getPaysByThemes(Themes themes) {
 
+        ArrayList<Pays> liste = new ArrayList<>();
+        String SQL= " select id_pays,nom_pays_fr from Pays as p where p.id_pays in (select id_pays from avoir as a where a.id_theme  =? )";
+        try (PreparedStatement pstmt = connexion.prepareStatement(SQL)){
+
+
+            // Determine the column set column
+
+            pstmt.setInt(1,themes.getIdThemes());
+            rs = pstmt.executeQuery();
+
+
+            while (rs.next()) {
+
+                liste.add(new Pays(rs.getInt(1),rs.getString(2)));
+            }
+            rs.close();
+
+        }
+        // Handle any errors that may have occurred.
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return liste;
+    }
     @Override
     public Pays getByID(int id) {
         return null;

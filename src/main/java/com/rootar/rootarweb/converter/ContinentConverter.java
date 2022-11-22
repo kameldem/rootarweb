@@ -1,6 +1,6 @@
 package com.rootar.rootarweb.converter;
 
-import com.rootar.rootarweb.RootarBean;
+import com.rootar.rootarweb.bean.ContinentBean;
 import com.rootar.rootarweb.metier.Continent;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
@@ -12,12 +12,12 @@ import jakarta.inject.Inject;
 public class ContinentConverter implements Converter {
 
     @Inject
-    private RootarBean rootarBean;
+    private ContinentBean continentBean;
 
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {
         if (value != null && value.trim().length() > 0){
 
-            for (Continent continent: rootarBean.getListContinent()){
+            for (Continent continent: continentBean.getListContinent()){
                 if(continent.getIdContinent()== Integer.parseInt(value)){
                     return continent;
                 }

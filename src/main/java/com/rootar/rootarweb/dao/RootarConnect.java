@@ -3,7 +3,6 @@ package com.rootar.rootarweb.dao;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 
 public class RootarConnect {
 

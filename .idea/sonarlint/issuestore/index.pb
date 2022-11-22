@@ -63,14 +63,6 @@ Csrc/main/java/com/rootar/rootarweb/converter/PrioriteConverter.java,e\5\e58033
 Rsrc/main/java/com/rootar/rootarweb/converter/RepresentationEtrangereConverter.java,c\3\c31309b603605066056b11af66d7875c75d6f337
 p
 @src/main/java/com/rootar/rootarweb/converter/SanteConverter.java,1\f\1fc4f820160db0134b5dd14d373d25ca0d6f6d38
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-X
-(src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-=
-rootarweb.iml,a\8\a8f727ac5ba7795a4256a2f786514eeb19486cdd
 Q
 !src/main/webapp/faces/index.xhtml,9\d\9d406a308083c3ecfd41ad80a095df42b2535b1c
 h
@@ -91,3 +83,9 @@ e
 5src/main/java/com/rootar/rootarweb/dao/ThemesDAO.java,b\7\b715ef316bfb16a71cf6a818562a698ee6c33941
 e
 5src/main/java/com/rootar/rootarweb/metier/Themes.java,9\b\9b7db2845f549fb844917f7bb884fa832e28bd2b
+g
+7src/main/java/com/rootar/rootarweb/securtity/Email.java,0\8\08fdb628cdf3ac8c2728e55056409c5ef8f3928b
+X
+(src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
+R
+"src/main/webapp/META-INF/beans.xml,a\e\ae5863ee55d849319d7e45bc253a4d65dc28361c
