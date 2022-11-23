@@ -61,8 +61,6 @@ Csrc/main/java/com/rootar/rootarweb/converter/PrioriteConverter.java,e\5\e58033
 Rsrc/main/java/com/rootar/rootarweb/converter/RepresentationEtrangereConverter.java,c\3\c31309b603605066056b11af66d7875c75d6f337
 p
 @src/main/java/com/rootar/rootarweb/converter/SanteConverter.java,1\f\1fc4f820160db0134b5dd14d373d25ca0d6f6d38
-Q
-!src/main/webapp/faces/index.xhtml,9\d\9d406a308083c3ecfd41ad80a095df42b2535b1c
 h
 8src/main/java/com/rootar/rootarweb/metier/Continent.java,0\d\0d6c327f3066c5b87a41482b4ef76af11601c399
 d

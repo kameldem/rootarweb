@@ -18,19 +18,19 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
         return true;
    }
 
-    public Usr getByMail(String mail) {
+    public Usr getByEmail(String email) {
         Usr newUsr= new Usr();
         String SQL= " select * from USR  where MAIL_USR=? ";
         try (PreparedStatement pstmt = connexion.prepareStatement(SQL)){
 
             // Determine the column set column
 
-            pstmt.setString(1,mail);
+            pstmt.setString(1,email);
             rs = pstmt.executeQuery();
 
             while (rs.next()) {
 
-               newUsr=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+               newUsr=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5), rs.getString(6));
             }
             rs.close();
 
@@ -56,7 +56,7 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
             while (rs.next()) {
 
 
-                liste.add(new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)));
+                liste.add(new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5), rs.getString(6)));
 
             }
             rs.close();
@@ -88,7 +88,7 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
 
             while (rs.next()) {
 
-               newUsr=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+               newUsr=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6));
             }
             rs.close();
 
@@ -102,7 +102,7 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
     public boolean insert(Usr usr) {
        String SHA2_512="SHA2_512";
       System.out.println(usr.getPassword() +"---------sr");
-        String SQL = "INSERT INTO USR(NOM_USR,PRENOM_USR,MAIL_USR,PASSWORD_USR) "+" VALUES (?,?,?,(HASHBYTES('SHA2_512',?)))";
+        String SQL = "INSERT INTO USR(NOM_USR,PRENOM_USR,MAIL_USR,PASSWORD_USR,LOGIN_USR) "+" VALUES (?,?,?,(HASHBYTES('SHA2_512',?)),?)";
 
         try (PreparedStatement pStmt = this.connexion.prepareStatement(SQL))
         {
@@ -110,8 +110,9 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
             if(usr != null) {
                 pStmt.setString(1, usr.getNom());
                 pStmt.setString(2,usr.getPrenom());
-                pStmt.setString(3, usr.getMail());
+                pStmt.setString(3, usr.getEmail());
                 pStmt.setString(4, usr.getPassword());
+                pStmt.setString(5, usr.getLogin());
 
                 pStmt.execute();
             }

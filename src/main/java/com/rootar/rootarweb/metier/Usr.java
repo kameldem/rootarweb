@@ -5,22 +5,27 @@ public class Usr {
     private int idUsr;
     private String nom;
     private String prenom;
-    private String mail;
+    private String email;
     private String password;
+
+    private String login;
 
     public Usr() {
         this.nom="";
         this.prenom="";
-        this.mail="";
+        this.email="";
         this.password="";
+        this.login="";
+
     }
 
-    public Usr(int idUsr, String nom, String prenom, String mail, String password) {
+    public Usr(int idUsr, String nom, String prenom, String mail, String password, String login) {
         this.idUsr = idUsr;
         this.nom = nom;
         this.prenom = prenom;
-        this.mail = mail;
+        this.email = mail;
         this.password = password;
+        this.login = login;
     }
 
     public String getNom() {
@@ -39,12 +44,12 @@ public class Usr {
         this.prenom = prenom;
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -63,13 +68,23 @@ public class Usr {
         this.idUsr = idUsr;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     @Override
     public String toString() {
         return "Usr{" +
-                "nom='" + nom + '\'' +
+                "idUsr=" + idUsr +
+                ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", mail='" + mail + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", login='" + login + '\'' +
                 '}';
     }
 }
