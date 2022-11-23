@@ -1,9 +1,6 @@
 package com.rootar.rootarweb.security;
 
-import jakarta.mail.Authenticator;
-import jakarta.mail.Message;
-import jakarta.mail.Session;
-import jakarta.mail.Transport;
+import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 
@@ -12,6 +9,8 @@ import java.util.Properties;
 
 
 public class Email {
+
+
     public static void sendEmail(String toEmail, String subject, String body){
         final String fromEmail = "fsackebandt";
         final String password ="";
@@ -27,9 +26,9 @@ public class Email {
 
         Authenticator auth = new Authenticator() {
             //override the getPasswordAuthentication method
-            /*protected PasswordAuthentication getPasswordAuthentication() {
+            protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(fromEmail, password);
-            }*/
+            }
         };
 
         Session session = Session.getDefaultInstance(props, auth);

@@ -81,9 +81,5 @@ e
 5src/main/java/com/rootar/rootarweb/dao/ThemesDAO.java,b\7\b715ef316bfb16a71cf6a818562a698ee6c33941
 e
 5src/main/java/com/rootar/rootarweb/metier/Themes.java,9\b\9b7db2845f549fb844917f7bb884fa832e28bd2b
-g
-7src/main/java/com/rootar/rootarweb/securtity/Email.java,0\8\08fdb628cdf3ac8c2728e55056409c5ef8f3928b
 X
 (src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
-R
-"src/main/webapp/META-INF/beans.xml,a\e\ae5863ee55d849319d7e45bc253a4d65dc28361c
