@@ -23,10 +23,18 @@ public class UrlRewriterFilter  implements Filter {
 
         String url = srequest.getRequestURI().trim();
         System.out.println(url);
-        url = url.substring(url.indexOf("/faces/")+7);
+        url = url.substring(url.indexOf("/",1)+1);
         StringBuilder forward=new StringBuilder();
         forward.append("/faces/");
-        if (url.matches(".continents\\/[0-9]{1,}$")) {
+        if(url.isEmpty()){
+
+            forward.append("index.jsf");
+            redirect(srequest,sresponse,forward);
+
+
+
+        }
+        /*else if (url.matches(".continents\\/[0-9]{1,}$")) {
             int pos = url.lastIndexOf("/");
             forward.append("pays.jsf?continent=");
             forward.append(url.substring(pos + 1));
@@ -38,9 +46,14 @@ public class UrlRewriterFilter  implements Filter {
         else
             forward.append(url);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(forward.toString());
-        requestDispatcher.forward(srequest, sresponse);
+        requestDispatcher.forward(srequest, sresponse);*/
     }
+    public void redirect(ServletRequest request, ServletResponse response, StringBuilder forward) throws ServletException, IOException {
 
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(forward.toString());
+        requestDispatcher.forward(request, response);
+    }
     @Override
     public void destroy() {
         Filter.super.destroy();
