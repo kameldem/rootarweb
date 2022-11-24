@@ -81,3 +81,9 @@ e
 5src/main/java/com/rootar/rootarweb/metier/Themes.java,9\b\9b7db2845f549fb844917f7bb884fa832e28bd2b
 X
 (src/main/webapp/WEB-INF/faces-config.xml,9\2\921ab541b29cd2aba50bbba38a0af79890ebe16a
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+\
+,src/main/webapp/faces/templates/header.xhtml,1\6\166196c9a9f48bf22942b431442f49f25489f560
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

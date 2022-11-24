@@ -32,6 +32,7 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
 
                newUsr=new Usr(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5), rs.getString(6));
             }
+
             rs.close();
 
         }
@@ -45,7 +46,6 @@ public class UsrDAO extends DAO <Usr, RootarSearch>{
 
         ArrayList<Usr> liste = new ArrayList<>();
         try (Statement stmt = connexion.createStatement()){
-
 
             // Determine the column set column
 

@@ -63,7 +63,7 @@ public class UserBean implements Serializable {
                 applicationBean.passwordHash(password),
                 new SimpleDateFormat("dd-MM-yy-HH:mm:ss").format(expiration));
         String urlEncode = SecurityTools.encrypt(url);
-        String valideUrl = applicationBean.getAbsolutePath() + "/confirm.jsf?compte=" + urlEncode;
+        String valideUrl = applicationBean.getAbsolutePath() + "/confirm.jsf?compte=  " + urlEncode;
         StringBuilder body = new StringBuilder("Veuillez cliquer le lien");
         body.append(valideUrl);
         Email.sendEmail(email,"Confirmation",body.toString());
