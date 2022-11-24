@@ -1,0 +1,11 @@
+
+
+java:S1319!"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ˆüñµ8À¾×ÇÊ0
+†
+java:S1319%"iThe type of "listVille" should be an interface such as "List" rather than the implementation "ArrayList".(ÖÀ’8À¾×ÇÊ0
+Q
+java:S1948"/Make "villeSelected" transient or serializable.(› ß¿ıÿÿÿÿ8¢™ÑÇÊ0
+M
+java:S1948"+Make "listVille" transient or serializable.(Ò›‡äøÿÿÿÿ8¢™ÑÇÊ0
+\
+java:S1128"?Remove this unused import 'com.rootar.rootarweb.metier.Region'.(ÿ„í8«âÇÊ0

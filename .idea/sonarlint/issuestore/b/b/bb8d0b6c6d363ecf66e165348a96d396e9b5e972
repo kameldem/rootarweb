@@ -1,0 +1,8 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ŞÆ­Ûşÿÿÿÿ
+O
+java:S6353"4Use concise quantifier syntax '+' instead of '{1,}'.(™Àööúÿÿÿÿ
+W
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(™Àööúÿÿÿÿ
+o
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(•‹‰Æıÿÿÿÿ

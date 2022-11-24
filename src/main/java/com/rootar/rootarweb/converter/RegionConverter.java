@@ -1,5 +1,6 @@
 package com.rootar.rootarweb.converter;
 
+import com.rootar.rootarweb.bean.RegionBean;
 import com.rootar.rootarweb.bean.RootarBean;
 import com.rootar.rootarweb.metier.Region;
 import jakarta.faces.component.UIComponent;
@@ -12,13 +13,13 @@ import jakarta.inject.Inject;
 public class RegionConverter implements Converter {
 
     @Inject
-    private RootarBean rootarBean;
+    private RegionBean regionBean;
 
     @Override
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {
         if (value != null && value.trim().length() > 0){
 
-            for (Region region: rootarBean.getListRegion()){
+            for (Region region: regionBean.getListRegion()){
                 if(region.getIdRegion()== Integer.parseInt(value)){
                     return region;
                 }

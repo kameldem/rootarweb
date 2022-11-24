@@ -1,0 +1,9 @@
+
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Œşöè8´àÖÇÊ0
+…
+java:S1319#"hThe type of "listPays" should be an interface such as "List" rather than the implementation "ArrayList".(«¨€Ÿ8´àÖÇÊ0
+P
+java:S1948".Make "paysSelected" transient or serializable.(šÀ‹øÿÿÿÿ8Ç•ĞÇÊ0
+G
+java:S1948"*Make "listPays" transient or serializable.(·â¤ª8È•ĞÇÊ0

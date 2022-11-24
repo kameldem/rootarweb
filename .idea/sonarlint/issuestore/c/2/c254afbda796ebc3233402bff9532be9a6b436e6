@@ -1,0 +1,16 @@
+
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(®ØØ›8ˆÚ´¥Ê0
+Š
+java:S1319…"gThe type of "listUsr" should be an interface such as "List" rather than the implementation "ArrayList".(à‚ÎÖşÿÿÿÿ8ˆÚ´¥Ê0
+S
+java:S1948"1Make "applicationBean" transient or serializable.(¹ƒ‡–øÿÿÿÿ8¡Ú´¥Ê0
+E
+java:S1948"(Make "newUsr" transient or serializable.(ùâãŸ8¢Ú´¥Ê0
+K
+java:S1948&")Make "listUsr" transient or serializable.(µßåêüÿÿÿÿ8£Ú´¥Ê0
+o	java:S1007"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¸¥úÿÿÿÿ8©Ú´¥Ê0
+V	java:S106‹"9Replace this use of System.out or System.err by a logger.(ÉŒÎß8ºÚ´¥Ê0
+[	java:S106"9Replace this use of System.out or System.err by a logger.(…ƒ’‹ùÿÿÿÿ8¼Ú´¥Ê0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(»¡›;8½Ú´¥Ê0
+V	java:S106’"9Replace this use of System.out or System.err by a logger.(Äõ„º8¾Ú´¥Ê0

@@ -1,0 +1,123 @@
+
+‹
+java:S1319e"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(˜Ìİşÿÿÿÿ
+ƒ
+java:S1319i"mThe type of "listAeroports" should be an interface such as "List" rather than the implementation "ArrayList".(äŠĞ»
+†
+java:S1319u"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ç¡ÖÛ
+„
+java:S1319y"nThe type of "listCategories" should be an interface such as "List" rather than the implementation "ArrayList".(´Áİ
+‡
+java:S1319…"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(şÔÿ½
+’
+java:S1319‰"vThe type of "donneesClimatArrayList" should be an interface such as "List" rather than the implementation "ArrayList".(ÿš×Îûÿÿÿÿ
+Œ
+java:S1319š"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Í‘çûÿÿÿÿ
+…
+java:S1319"iThe type of "listVisas" should be an interface such as "List" rather than the implementation "ArrayList".(ÍÖìúøÿÿÿÿ
+Œ
+java:S1319ª"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ô¢Šùÿÿÿÿ
+„
+java:S1319®"mThe type of "listEvenments" should be an interface such as "List" rather than the implementation "ArrayList".(ªÛŒâ
+Œ
+java:S1319º"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ôöšáøÿÿÿÿ
+‡
+java:S1319¾"kThe type of "listLangues" should be an interface such as "List" rather than the implementation "ArrayList".(Í¤üøıÿÿÿÿ
+‡
+java:S1319Ê"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(æ¢ú¿
+‡
+java:S1319Î"kThe type of "listMonnaie" should be an interface such as "List" rather than the implementation "ArrayList".(¿ƒíøÿÿÿÿ
+Œ
+java:S1319Ú"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ê¡¼Æûÿÿÿÿ
+…
+java:S1319Ş"iThe type of "listObjet" should be an interface such as "List" rather than the implementation "ArrayList".(¯üğ…şÿÿÿÿ
+‡
+java:S1319ê"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(•ºàº
+ˆ
+java:S1319î"lThe type of "listPriorite" should be an interface such as "List" rather than the implementation "ArrayList".(ˆçıÿÿÿÿ
+†
+java:S1319ú"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(÷ë÷:
+
+java:S1319ş"jThe type of "listRepEtr" should be an interface such as "List" rather than the implementation "ArrayList".(óÊà«
+Œ
+java:S1319Š"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ß‰—Ÿşÿÿÿÿ
+€
+java:S1319"iThe type of "listSante" should be an interface such as "List" rather than the implementation "ArrayList".(Ø©¤ª
+Œ
+java:S1319š"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(çèÔÓûÿÿÿÿ
+…
+java:S1319"nThe type of "listTypeClimat" should be an interface such as "List" rather than the implementation "ArrayList".(–­…€
+Œ
+java:S1319ª"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÆŠ¿©ûÿÿÿÿ
+„
+java:S1319®"mThe type of "listTypeVisas" should be an interface such as "List" rather than the implementation "ArrayList".(ú™ı¾
+Œ
+java:S1319²"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÀòÏŞùÿÿÿÿ
+‰
+java:S1319¶"rThe type of "listContinentCombo" should be an interface such as "List" rather than the implementation "ArrayList".(ëŸ®ó
+l	java:S116"XRename this field "ListAeroports" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×Î¢
+—
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸ñ‘ì
+q
+java:S14504"[Remove the "rootarSearch" field and declare it as a local variable in the relevant methods.(Úµéª
+L
+java:S1948"1Make "applicationBean" transient or serializable.(¹ƒ‡–øÿÿÿÿ
+I
+java:S1948"3Make "aeroportsSelected" transient or serializable.(ÏÄù
+D
+java:S1948"/Make "ListAeroports" transient or serializable.(×Î¢
+J
+java:S1948"4Make "categoriesSelected" transient or serializable.(‰°•³
+K
+java:S1948"0Make "listCategories" transient or serializable.(˜×ğ¬şÿÿÿÿ
+M
+java:S1948"7Make "donneesClimatSelected" transient or serializable.(±Ì’£
+N
+java:S1948"8Make "donneesClimatArrayList" transient or serializable.(¡ûç„
+J
+java:S1948"/Make "visasSelected" transient or serializable.(Á’Ñöıÿÿÿÿ
+A
+java:S1948"+Make "listVisas" transient or serializable.(‡¦Œò
+O
+java:S1948 "4Make "evenementsSelected" transient or serializable.(æÉ¬üÿÿÿÿ
+J
+java:S1948!"/Make "listEvenments" transient or serializable.(®áÔõúÿÿÿÿ
+G
+java:S1948""1Make "languesSelected" transient or serializable.(ˆ½ü¬
+H
+java:S1948#"-Make "listLangues" transient or serializable.(¨†Å—ıÿÿÿÿ
+L
+java:S1948$"1Make "monnaieSelected" transient or serializable.(Û‘ç‚ùÿÿÿÿ
+H
+java:S1948%"-Make "listMonnaie" transient or serializable.(ìÉ¸áüÿÿÿÿ
+E
+java:S1948&"/Make "objetSelected" transient or serializable.( ¹âÄ
+A
+java:S1948'"+Make "listObjet" transient or serializable.(’áÆ°
+H
+java:S1948("2Make "prioriteSelected" transient or serializable.(÷â‚ê
+I
+java:S1948)".Make "listPriorite" transient or serializable.(ƒäí€øÿÿÿÿ
+K
+java:S1948*"0Make "repEtrSelected" transient or serializable.(Òšªñşÿÿÿÿ
+G
+java:S1948+",Make "listRepEtr" transient or serializable.(»³Ö—úÿÿÿÿ
+E
+java:S1948,"/Make "santeSelected" transient or serializable.(‹Ë¶
+A
+java:S1948-"+Make "listSante" transient or serializable.(Õƒ˜
+O
+java:S1948."4Make "typeClimatSelected" transient or serializable.(¯èüØıÿÿÿÿ
+F
+java:S1948/"0Make "listTypeClimat" transient or serializable.(¡ôØğ
+N
+java:S19480"3Make "typeVisasSelected" transient or serializable.(²ÄŞşÿÿÿÿ
+E
+java:S19481"/Make "listTypeVisas" transient or serializable.(¹¿¤¶
+J
+java:S19482"4Make "listContinentCombo" transient or serializable.(í‰ƒ…
+D
+java:S19484".Make "rootarSearch" transient or serializable.(Úµéª
+V	java:S125I"<This block of commented-out lines of code should be removed.(œôéèÿÿÿÿÿ
+F
+java:S10684"0Remove this unused "rootarSearch" private field.(Úµéª

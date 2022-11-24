@@ -1,6 +1,7 @@
 package com.rootar.rootarweb.converter;
 
 import com.rootar.rootarweb.bean.RootarBean;
+import com.rootar.rootarweb.bean.VilleBean;
 import com.rootar.rootarweb.metier.Ville;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
@@ -12,13 +13,13 @@ import jakarta.inject.Inject;
 public class VilleConverter implements Converter {
 
     @Inject
-    private RootarBean rootarBean;
+    private VilleBean villeBean;
 
     @Override
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {
         if (value != null && value.trim().length() > 0){
 
-            for (Ville ville: rootarBean.getListVille()){
+            for (Ville ville: villeBean.getListVille()){
                 if(ville.getIdVille()== Integer.parseInt(value)){
                     return ville;
                 }

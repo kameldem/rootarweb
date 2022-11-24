@@ -18,18 +18,14 @@ public class RootarBean implements Serializable {
     ApplicationBean applicationBean;
     private String nomIMage;
 
-    private Pays paysSelected;
-    private ArrayList<Pays> listPays;
+
     private Aeroports aeroportsSelected;
     private ArrayList<Aeroports>ListAeroports;
     private Categories categoriesSelected;
     private ArrayList<Categories> listCategories;
     private DonneesClimat donneesClimatSelected;
     private ArrayList<DonneesClimat> donneesClimatArrayList;
-    private Ville villeSelected;
-    private ArrayList<Ville> listVille;
-    private Region regionSelected;
-    private ArrayList<Region> listRegion;
+
 
     private Visas visasSelected;
     private ArrayList<Visas> listVisas;
@@ -68,11 +64,7 @@ public class RootarBean implements Serializable {
 
         listContinentCombo=DAOFactory.getContinentDAO().getAll();
         listContinentCombo.add(0,new Continent(0,"Choisir un continent"));
-        listPays=DAOFactory.getPaysDAO().getAll();
-        listPays.add(0,new Pays(0,"choisir un pays"));
-        listVille=DAOFactory.getVilleDAO().getAll();
-        Ville ville = new Ville(0, "Choisir une Ville");
-        listVille.add(0, ville);
+
 
         listTypeClimat=DAOFactory.getTypeClimatDAO().getAll();
         TypeClimat typeClimat = new TypeClimat(0, "Choisir un Type Climat");
@@ -96,21 +88,7 @@ public class RootarBean implements Serializable {
         this.nomIMage = nomIMage;
     }
 
-    public Pays getPaysSelected() {
-        return paysSelected;
-    }
 
-    public void setPaysSelected(Pays paysSelected) {
-        this.paysSelected = paysSelected;
-    }
-
-    public ArrayList<Pays> getListPays() {
-        return listPays;
-    }
-
-    public void setListPays(ArrayList<Pays> listPays) {
-        this.listPays = listPays;
-    }
 
     public Aeroports getAeroportsSelected() {
         return aeroportsSelected;
@@ -160,37 +138,9 @@ public class RootarBean implements Serializable {
         this.donneesClimatArrayList = donneesClimatArrayList;
     }
 
-    public Ville getVilleSelected() {
-        return villeSelected;
-    }
 
-    public void setVilleSelected(Ville villeSelected) {
-        this.villeSelected = villeSelected;
-    }
 
-    public ArrayList<Ville> getListVille() {
-        return listVille;
-    }
 
-    public void setListVille(ArrayList<Ville> listVille) {
-        this.listVille = listVille;
-    }
-
-    public Region getRegionSelected() {
-        return regionSelected;
-    }
-
-    public void setRegionSelected(Region regionSelected) {
-        this.regionSelected = regionSelected;
-    }
-
-    public ArrayList<Region> getListRegion() {
-        return listRegion;
-    }
-
-    public void setListRegion(ArrayList<Region> listRegion) {
-        this.listRegion = listRegion;
-    }
 
 
     public Visas getVisasSelected() {
@@ -360,5 +310,7 @@ public class RootarBean implements Serializable {
     public void setListContinentCombo(ArrayList<Continent> listContinentCombo) {
         this.listContinentCombo = listContinentCombo;
     }
+
+
 
 }

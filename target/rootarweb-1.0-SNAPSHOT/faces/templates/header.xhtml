@@ -78,29 +78,7 @@
 
         </h:form>
     </div>
-    <div>
-        <h:form >
-            <div class="card">
-                <p:carousel id="themes" value="#{themeBean.listThemes}" var="theme" numVisible="4" numScroll="3">
-                    <f:facet name="header">
-                    </f:facet>
-                    <div class="product-item">
-                        <div class="product-item-content">
-                            <div class="mb-3">
-                                <h:commandLink  action="#{themeBean.buttonListTheme}" actionListener="#{themeBean.showThemes(theme)}" >
-                                    <h:graphicImage value="./faces/#{theme.libelleThemes}.jpg"  style="border:0px;"/>
 
-                                </h:commandLink>
-                                <h4 class="mb-1">#{theme.libelleThemes}</h4>
-                            </div>
-                        </div>
-                    </div>
-                </p:carousel>
-
-            </div>
-
-        </h:form>
-    </div>
 
 
 </ui:composition>

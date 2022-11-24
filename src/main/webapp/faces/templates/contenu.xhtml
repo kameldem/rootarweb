@@ -7,34 +7,35 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <f:view>
-    <h:form id="form">
-        <p:dataTable id="idrootar" widgetVar="rootars" var="rootar" value="#{rootarBean.listPays}"
-                     reflow="true" styleClass="products-table" selection="#{rootarBean.paysSelected}"
-                     rowKey="#{rootar.idPays}" paginator="true" rows="10" rowSelectMode="add" paginatorPosition="bottom">
-        <f:facet name="header">
-            <div class="products-table-header">
-                <span class="filter-container ui-input-icon-left"> <i class="pi pi-search"></i>
-                        <p:inputText id="globalFilter" onkeyup="PF('dtProducts').filter()" placeholder="Recherche" />
-                    </span>
-            </div>
-        </f:facet>
 
-            <p:column headerText="Id Pays" sortBy="#{rootar.idPays}" filterBy="#{rootar.idPays}">
-                <h:outputText value="#{rootar.idPays}" />
-            </p:column>
-        <p:column headerText="Pays" sortBy="#{rootar.nomPaysFr}" filterBy="#{rootar.nomPaysFr}">
-            <h:outputText value="#{rootar.nomPaysFr}" />
-        </p:column>
-            <p:column headerText="Nationalité" sortBy="#{rootar.nationalite}" filterBy="#{rootar.nationalite}">
-                <h:outputText value="#{rootar.nationalite}" />
-            </p:column>
-            <p:column headerText="Nombre d'habitant" sortBy="#{rootar.nbreHabitant}" filterBy="#{rootar.nbreHabitant}">
-                <h:outputText value="#{rootar.nbreHabitant}" />
-            </p:column>
-            <p:column headerText="Superficie" sortBy="#{rootar.superficie}" filterBy="#{rootar.superficie}">
-                <h:outputText value="#{rootar.superficie}" />
-            </p:column>
-    </p:dataTable>
-    </h:form>
+    <span class="ui-input-icon-left">
+        <i class="pi pi-search" />
+        <p:inputText placeholder="Pays, Régions, Ville..." />
+    </span>
+
+<div>
+<h:form >
+    <div class="card">
+        <p:carousel id="themes" value="#{themeBean.listThemes}" var="theme" numVisible="4" numScroll="3">
+            <f:facet name="header">
+            </f:facet>
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <h:commandLink  action="#{themeBean.buttonListTheme}" actionListener="#{themeBean.showThemes(theme)}" >
+                            <h:graphicImage value="./faces/#{theme.libelleThemes}.jpg"  style="border:0px;"/>
+
+                        </h:commandLink>
+                        <h4 class="mb-1">#{theme.libelleThemes}</h4>
+                    </div>
+                </div>
+            </div>
+        </p:carousel>
+
+    </div>
+
+</h:form>
+</div>
+
 </f:view>
 </html>
