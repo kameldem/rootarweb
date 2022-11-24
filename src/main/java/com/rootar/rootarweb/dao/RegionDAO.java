@@ -3,7 +3,9 @@ package com.rootar.rootarweb.dao;
 
 import com.rootar.rootarweb.metier.Pays;
 import com.rootar.rootarweb.metier.Region;
+import com.rootar.rootarweb.metier.TypeClimat;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +16,39 @@ public class RegionDAO extends DAO <Region, Region>{
     protected RegionDAO(Connection connexion) {
         super(connexion);
     }
+
+
+    public ArrayList<Region> searchRegion(String searchView){
+        ArrayList<Region> liste = new ArrayList<>();
+        String procedureStockee = "{call dbo.SP_RECHERCHE_REGION (?)}";
+        try (CallableStatement cStmt = this.connexion.prepareCall(procedureStockee))
+        {
+
+            cStmt.setString(1,searchView);
+
+            cStmt.execute();
+            rs = cStmt.getResultSet();
+            while(rs.next()) {
+                Region newRegion= new Region();
+                newRegion.setIdRegion(rs.getInt(1));
+                newRegion.setNomRegion(rs.getString(2));
+                newRegion.setPays(new Pays(rs.getInt(3),rs.getString(4)));
+                newRegion.setTypeClimat(new TypeClimat(rs.getInt(5),rs.getString(6)));
+                liste.add(newRegion);
+            }
+
+            rs.close();
+        }
+
+        // Handle any errors that may have occurred.
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return liste;
+    }
+
 
     public ArrayList<Region> getRegionByPays(Pays pays) {
 

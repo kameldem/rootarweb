@@ -15,10 +15,10 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
     }
     public ArrayList<Pays> searchPays(String searchView){
         ArrayList<Pays> liste = new ArrayList<>();
-        String procedureStockee = "{call dbo.SP_RECHERCHE (?,?,?,?,?,?)}";
+        String procedureStockee = "{call dbo.SP_RECHERCHE (?,?)}";
         try (CallableStatement cStmt = this.connexion.prepareCall(procedureStockee))
         {
-            cStmt.setString(1,"id_pays,nom_pays_fr,nom_pays_ang,id_continent,nom_continent_fr,nationalite,nombre_habitant,superficie," +
+            cStmt.setString(1,"id_pays,nom_pays_fr,id_continent,nom_continent_fr,nationalite,nombre_habitant,superficie," +
                     "devise,indicatif_telephonique,fete_nationale,id_monnaie,libelle_monnaie");
             cStmt.setString(2,searchView);
 
@@ -30,15 +30,15 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
                 Pays newPays= new Pays();
                 newPays.setIdPays(rs.getInt(1));
                 newPays.setNomPaysFr(rs.getString(2));
-                newPays.setNomPaysAng(rs.getString(3));
-                newPays.setContinent(new Continent(rs.getInt(4),rs.getString(5)));
-                newPays.setNationalite(rs.getString(6));
-                newPays.setNbreHabitant(rs.getInt(7));
-                newPays.setSuperficie(rs.getInt(8));
-                newPays.setDevise(rs.getString(9));
-                newPays.setIndicatifTel(rs.getString(10));
-                newPays.setFeteNationale(rs.getString(11));
-                newPays.setMonnaie(new Monnaie(rs.getInt(12),rs.getString(13)));
+
+                newPays.setContinent(new Continent(rs.getInt(3),rs.getString(4)));
+                newPays.setNationalite(rs.getString(5));
+                newPays.setNbreHabitant(rs.getInt(6));
+                newPays.setSuperficie(rs.getInt(7));
+                newPays.setDevise(rs.getString(8));
+                newPays.setIndicatifTel(rs.getString(9));
+                newPays.setFeteNationale(rs.getString(10));
+                newPays.setMonnaie(new Monnaie(rs.getInt(11),rs.getString(12)));
                 liste.add(newPays);
             }
 

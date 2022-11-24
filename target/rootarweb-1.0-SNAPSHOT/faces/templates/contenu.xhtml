@@ -63,7 +63,7 @@
                     <p:inputText id="txt1" value="#{rootarBean.searchView}"   placeholder="Pays,Région,Ville" required="true" label="Text 1" style="width: 12rem">
                         <f:validateLength minimum="2"/>
                     </p:inputText>
-                    <p:commandButton process="@parent:@parent" update="@form"  icon="pi pi-search" styleClass="mr-2" />
+                    <p:commandButton action="#{rootarBean.buttonSearch()}" update="@form"  icon="pi pi-search" styleClass="mr-2" />
                     <p:message for="txt1"/>
                     <h:outputText value="#{rootarBean.searchView}"/>
 

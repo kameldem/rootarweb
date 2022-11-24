@@ -7,50 +7,66 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:head>
-        <h:outputStylesheet library="css" name="menu.css"/>
+    <h:head id="entete">
+        <h:outputStylesheet library="css" name="searchaccueil.css"/>
         <title>
             <ui:insert name="titre">Details</ui:insert>
         </title>
     </h:head>
     <h:body>
+        <div id="entete"> <img src="logo_transparent.png" alt="logo" width="160" height="160"></img>
+            <span>
+
+            <p:commandButton  icon="pi pi-user"  styleClass="mr-2" size="xlarge" shape="circle"
+                          oncomplete="PF('connexionUser').show()" process="@this"></p:commandButton>
+
+
+        <p:link style="color: yellow" url="#{applicationBean.faces}/index.jsf" value="Connexion"></p:link>
+        <p:link style="color: yellow" outcome="inscriptionform" value="Inscrivez-vous "></p:link>
+        </span>
+        </div>
         <h:outputLabel value="Hello, world"/>
         <div class="card">
-            <h5 style="margin-top:0">Basic</h5>
+            <h:form id="form">
+
+                <ui:repeat var="pays" value="#{rootarBean.listPaysSearch}">
             <p:panelGrid columns="2">
+
                 <f:facet name="header">
-                    <p:graphicImage name="demo/images/misc/kobe.png"/>
+                    <p:graphicImage name="../resources/img/img_pays/#{pays.nomPaysFr}.jpg"/>
                 </f:facet>
 
+
                 <h:outputText value="Nom pays:"/>
-                <h:outputText value="gfdhfhfhfdh"/>
+                <h:outputText value="#{pays.nomPaysFr}"/>
 
                 <h:outputText value="continent:"/>
-                <h:outputText value="Los Angeles Lakers"/>
+                <h:outputText value="#{pays.continent}"/>
 
                 <h:outputText value="Nationalite:"/>
-                <h:outputText value="Shooting Guard"/>
+                <h:outputText value="#{pays.nationalite}"/>
 
                 <h:outputText value="Nombre d'habitant:"/>
-                <h:outputText value="24"/>
+                <h:outputText value="#{pays.nbreHabitant}"/>
 
                 <h:outputText value="Superficie"/>
-                <h:outputText value="24"/>
+                <h:outputText value="#{pays.superficie}"/>
 
                 <h:outputText value="Devise"/>
-                <h:outputText value="24"/>
+                <h:outputText value="#{pays.devise}"/>
 
                 <h:outputText value="Indicatif téléphonique"/>
-                <h:outputText value="24"/>
+                <h:outputText value="#{pays.indicatifTel}"/>
 
                 <h:outputText value="Monnaie"/>
-                <h:outputText value="24"/>
+                <h:outputText value="#{pays.monnaie}"/>
 
                 <h:outputText value="Fête nationale"/>
-                <h:outputText value="24"/>
-
+                <h:outputText value="#{pays.feteNationale}"/>
 
             </p:panelGrid>
+                </ui:repeat>
+            </h:form>
         </div>
 
     </h:body>

@@ -5,9 +5,11 @@ import com.rootar.rootarweb.metier.*;
 import com.rootar.rootarweb.service.RootarSearch;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -52,7 +54,7 @@ public class RootarBean implements Serializable {
     private TypeVisas typeVisasSelected;
     private ArrayList<TypeVisas> listTypeVisas;
     private ArrayList<Continent> listContinentCombo;
-
+    private ArrayList<Pays> listPaysSearch;
     private RootarSearch rootarSearch;
 
     private String searchView;
@@ -66,6 +68,7 @@ public class RootarBean implements Serializable {
     private void init(){
 
         rootarSearch = new RootarSearch();
+
 
         listContinentCombo=DAOFactory.getContinentDAO().getAll();
         listContinentCombo.add(0,new Continent(0,"Choisir un continent"));
@@ -83,7 +86,11 @@ public class RootarBean implements Serializable {
 
     }
 
-
+    public void buttonSearch() throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect("./faces/searchaccueil.jsf");
+        listPaysSearch=DAOFactory.getPaysDAO().searchPays(searchView);
+        System.out.println(searchView + "searchview");
+    }
 
 
 
@@ -392,5 +399,13 @@ public class RootarBean implements Serializable {
 
     public void setOptionView(String optionView) {
         this.optionView = optionView;
+    }
+
+    public ArrayList<Pays> getListPaysSearch() {
+        return listPaysSearch;
+    }
+
+    public void setListPaysSearch(ArrayList<Pays> listPaysSearch) {
+        this.listPaysSearch = listPaysSearch;
     }
 }

@@ -5,3 +5,10 @@
 .customPanelGrid .ui-panelgrid-content {
     align-items: center;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../faces/rootar.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+}
