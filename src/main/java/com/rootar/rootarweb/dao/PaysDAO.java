@@ -13,7 +13,46 @@ public class PaysDAO extends DAO <Pays, RootarSearch>{
     protected PaysDAO(Connection connexion) {
         super(connexion);
     }
+    public ArrayList<Pays> searchPays(String searchView){
+        ArrayList<Pays> liste = new ArrayList<>();
+        String procedureStockee = "{call dbo.SP_RECHERCHE (?,?,?,?,?,?)}";
+        try (CallableStatement cStmt = this.connexion.prepareCall(procedureStockee))
+        {
+            cStmt.setString(1,"id_pays,nom_pays_fr,nom_pays_ang,id_continent,nom_continent_fr,nationalite,nombre_habitant,superficie," +
+                    "devise,indicatif_telephonique,fete_nationale,id_monnaie,libelle_monnaie");
+            cStmt.setString(2,searchView);
 
+            // cStmt.setInt(6,rootarSearch.getTypeClimat().getIdTypeClimat());
+
+            cStmt.execute();
+            rs = cStmt.getResultSet();
+            while(rs.next()) {
+                Pays newPays= new Pays();
+                newPays.setIdPays(rs.getInt(1));
+                newPays.setNomPaysFr(rs.getString(2));
+                newPays.setNomPaysAng(rs.getString(3));
+                newPays.setContinent(new Continent(rs.getInt(4),rs.getString(5)));
+                newPays.setNationalite(rs.getString(6));
+                newPays.setNbreHabitant(rs.getInt(7));
+                newPays.setSuperficie(rs.getInt(8));
+                newPays.setDevise(rs.getString(9));
+                newPays.setIndicatifTel(rs.getString(10));
+                newPays.setFeteNationale(rs.getString(11));
+                newPays.setMonnaie(new Monnaie(rs.getInt(12),rs.getString(13)));
+                liste.add(newPays);
+            }
+
+            rs.close();
+        }
+
+        // Handle any errors that may have occurred.
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return liste;
+    }
     public ArrayList<Pays> getAll() {
         ArrayList<Pays> liste = new ArrayList<>();
         try (Statement stmt = connexion.createStatement()){

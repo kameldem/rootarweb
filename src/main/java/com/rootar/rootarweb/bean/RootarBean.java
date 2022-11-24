@@ -55,7 +55,8 @@ public class RootarBean implements Serializable {
 
     private RootarSearch rootarSearch;
 
-
+    private String searchView;
+    private String optionView;
     public RootarBean() {
 
 
@@ -361,4 +362,35 @@ public class RootarBean implements Serializable {
         this.listContinentCombo = listContinentCombo;
     }
 
+    public ApplicationBean getApplicationBean() {
+        return applicationBean;
+    }
+
+    public void setApplicationBean(ApplicationBean applicationBean) {
+        this.applicationBean = applicationBean;
+    }
+
+    public RootarSearch getRootarSearch() {
+        return rootarSearch;
+    }
+
+    public void setRootarSearch(RootarSearch rootarSearch) {
+        this.rootarSearch = rootarSearch;
+    }
+
+    public String getSearchView() {
+        return searchView;
+    }
+
+    public void setSearchView(String searchView) {
+        this.searchView = searchView;
+    }
+
+    public String getOptionView() {
+        return optionView;
+    }
+
+    public void setOptionView(String optionView) {
+        this.optionView = optionView;
+    }
 }
